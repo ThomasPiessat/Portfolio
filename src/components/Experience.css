@@ -1,0 +1,58 @@
+#experience{
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+  
+  .experience-container{
+    position: relative;
+    padding: 4%;
+    display: inline-block;
+  }
+  
+  .experience-title {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    color: #00ff00;
+  }
+  
+  .experience-title::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #00ff00;
+    border-radius: 50%;
+  }
+  
+  .experience-title::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 4px;
+    bottom: 0;
+    width: 2px;
+    background-color: #333;
+  }
+  
+  .date{
+      position: relative;
+      box-sizing: content-box;
+      width: 100%;
+      text-align: center;
+      color: white;
+      background-color: #333;   
+    }
+    
+    .description{
+      position: relative;
+      top: 10px;
+      color: rgb(255, 0, 0);
+      display: list-item;
+    }

@@ -1,0 +1,24 @@
+.component-project-box {
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  background-color: aqua;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.component-project-box:hover {
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  transform: scale(1.1); /* Increase size by 10% on hover */
+}
+
+.component-project-box:hover .image-container img.active {
+  opacity: 1;
+}
