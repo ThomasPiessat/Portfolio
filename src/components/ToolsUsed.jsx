@@ -16,7 +16,7 @@ function ToolsUsed() {
   return (
     <section>
       {/* List of tools used */}
-      <h2>Tools Used</h2>
+      <h1>Tools Used</h1>
       <ul>
         <div class="tool-container">        
           <img src={VS_Icon} alt="visual-basic" class="tool-image"></img>
