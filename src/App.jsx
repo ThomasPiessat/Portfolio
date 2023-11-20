@@ -5,6 +5,7 @@ import ProfileDescription from './components/ProfileDescription.jsx';
 import ToolsUsed from './components/ToolsUsed.jsx';
 import Experience from './components/Experience.jsx';
 import ProjectBox from './components/ProjectBox.jsx';
+import VSCode_Icon from './assets/img/PCG/Overview.png'
 
 const styles = {
   display: 'flex',
@@ -27,9 +28,9 @@ function App() {
          </div>
           <ToolsUsed />
           <div style={styles}>
-           <ProjectBox title="Personal Project" description={"Projects that I did during my free time"}/>
-           <ProjectBox title="Professional Project" description={"Projects that I did in studios"} />
-            <ProjectBox title="Student Project" description={"Projects that I did during my studies"} />
+           <ProjectBox title="Personal Project" description={"Projects that I did during my free time"} />
+           <ProjectBox title="Professional Project" description={"Projects that I did in studios"} images={VSCode_Icon}/>
+           <ProjectBox title="Student Project" description={"Projects that I did during my studies"} />
          </div>
         </main>
         <footer>

@@ -1,12 +1,24 @@
 import React from 'react';
+// import ProjectSlideshow from '../ProjectSlideshow';
 import './ProjectBox.css'
 
-function ProjectBox({ title, description }) {
+const style = {
+  margin: '10px', 
+  padding: '15px', 
+  width: '30%' 
+};
+
+
+function ProjectBox({ title, description, images }) {
   return (
-    <div class="component-project-box" onclick="openNewWindow()">
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <div class="image-container"/> 
+    <div style={style}>
+      <div class="component-project-box" onclick="openNewWindow()">
+          <h2>{title}</h2>
+          <p>{description}</p>
+          {/* <ProjectSlideshow images={images} /> */}
+          <img src={images} alt="visual-code" class="tool-image"></img>
+          <div class="image-container"/> 
+      </div>
     </div>
   );
 }
