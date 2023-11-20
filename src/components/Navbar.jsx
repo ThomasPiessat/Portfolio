@@ -3,9 +3,9 @@ import './Navbar.css'
 
 function Navbar() {
   return (
-    <header>
+    <header>      
       <div class="navbar-container">
-          <h1>Thomas Piessat</h1>
+        <h1>Thomas Piessat</h1>
       </div>
     </header>
   );

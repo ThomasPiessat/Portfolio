@@ -14,23 +14,29 @@ const styles = {
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <ProfileDescription />
-      <div style={styles}>
-        <Experience title="Education" xpTitle={"Objectif 3D - Gameplay programmer"} date={"2017-2020"} location={"Montpellier, France"}/>
-        <Experience title="Professional Experience" xpTitle={"Software Engineer"} date={"2020-Present"} location={"Black Shamrock - a Virtuos Studio, Dublin"}/>
+    <body>
+      <div>
+        <nav class="navbar">
+          <Navbar />
+        </nav>
+        <main>
+          <ProfileDescription />
+          <div style={styles}>
+            <Experience title="Education" xpTitle={"Objectif 3D - Gameplay programmer"} date={"2017-2020"} location={"Montpellier, France"}/>
+            <Experience title="Professional Experience" xpTitle={"Software Engineer"} date={"2020-Present"} location={"Black Shamrock - a Virtuos Studio, Dublin"}/>
+         </div>
+          <ToolsUsed />
+          <div style={styles}>
+           <ProjectBox title="Personal Project" description={"Projects that I did during my free time"}/>
+           <ProjectBox title="Professional Project" description={"Projects that I did in studios"} />
+            <ProjectBox title="Student Project" description={"Projects that I did during my studies"} />
+         </div>
+        </main>
+        <footer>
+        <p>Copyright information and other legal information</p>
+      </footer>
       </div>
-      <ToolsUsed />
-      <div style={styles}>
-        <ProjectBox title="Personal Project" description={"Projects that I did during my free time"}/>
-        <ProjectBox title="Professional Project" description={"Projects that I did in studios"} />
-        <ProjectBox title="Student Project" description={"Projects that I did during my studies"} />
-      </div>
-      <footer>
-      <p>Copyright information and other legal information</p>
-    </footer>
-    </div>
+    </body>
   );
 }
 

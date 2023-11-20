@@ -1,46 +1,46 @@
-section {
-    text-align: center;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
+.tools-container {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
 
-  #toolused {
-    text-align: center;
-  }
-    .tool-container {
-      margin-top: 2%;
-      margin-left: 2%;
-      margin-right: 2%;
-      position: relative;
-      display: inline-block;
-    }
-  
-    .tool-image {
-      display: block;
-      width: 60px;
-      height: 60px;
-    }
-    
-    .tool-text {
-      visibility: hidden;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: #fff;
-      text-align: center;
-      border-radius: 4px;
-      padding: 5px;
-      position: absolute;
-      z-index: 1;
-      bottom: -60%;
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    
-    .tool-container:hover .tool-text {
-      visibility: visible;
-      opacity: 1;
-    }
+.tool-container {
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  position: relative;
+  display: inline-block;
+}
+
+.tool-image {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.tool-text {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: -60%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tool-container:hover .tool-text {
+  visibility: visible;
+  opacity: 1;
+}

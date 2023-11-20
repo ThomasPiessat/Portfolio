@@ -14,8 +14,7 @@ import Vue_Icon from '../assets/img/ICO/vue.png'
 
 function ToolsUsed() {
   return (
-    <section>
-      {/* List of tools used */}
+    <div class="tools-container">
       <h1>Tools Used</h1>
       <ul>
         <div class="tool-container">        
@@ -59,7 +58,7 @@ function ToolsUsed() {
           <div class="tool-text">Vue</div>
         </div>
       </ul>
-    </section>
+    </div>
   );
 }
 
