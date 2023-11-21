@@ -1,19 +1,23 @@
-import React from 'react';
 import './App.css'
 import Navbar from './components/Navbar.jsx';
 import ProfileDescription from './components/ProfileDescription.jsx';
 import ToolsUsed from './components/ToolsUsed.jsx';
 import Experience from './components/Experience.jsx';
 import ProjectBox from './components/ProjectBox.jsx';
-import VSCode_Icon from './assets/img/PCG/Overview.png'
+
+import PCG_Overview from './assets/img/PCG/CityAlongsideRoad.png'
+import PCG_CirtyGeneration from './assets/img/PCG/CityGeneration.png'
+import PCG_CityRoad from './assets/img/PCG/CityAlongsideRoad.png'
 
 const styles = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
 };
+const personalProjectImages = [PCG_Overview,PCG_CirtyGeneration,PCG_CityRoad ];
 
 function App() {
+
   return (
     <body>
       <div>
@@ -28,8 +32,8 @@ function App() {
          </div>
           <ToolsUsed />
           <div style={styles}>
-           <ProjectBox title="Personal Project" description={"Projects that I did during my free time"} />
-           <ProjectBox title="Professional Project" description={"Projects that I did in studios"} images={VSCode_Icon}/>
+           <ProjectBox title="Personal Project" description={"Projects that I did during my free time"} images={personalProjectImages}/>
+           <ProjectBox title="Professional Project" description={"Projects that I did in studios"} />
            <ProjectBox title="Student Project" description={"Projects that I did during my studies"} />
          </div>
         </main>

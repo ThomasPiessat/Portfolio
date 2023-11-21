@@ -1,5 +1,5 @@
-import React from 'react';
-// import ProjectSlideshow from '../ProjectSlideshow';
+import React, { useEffect } from 'react';
+import AutoSlideshow from './AutoSlideshow.jsx';
 import './ProjectBox.css'
 
 const style = {
@@ -8,15 +8,20 @@ const style = {
   width: '30%' 
 };
 
+const ProjectBox = ({title, description, images}) => {
+  useEffect(() => {
+    // Any additional setup or cleanup code can go here
+    return () => {
+      // Cleanup code (if needed)
+    };
+  }, []);
 
-function ProjectBox({ title, description, images }) {
   return (
     <div style={style}>
-      <div class="component-project-box" onclick="openNewWindow()">
+      <div class="component-project-box">
           <h2>{title}</h2>
           <p>{description}</p>
-          {/* <ProjectSlideshow images={images} /> */}
-          <img src={images} alt="visual-code" class="tool-image"></img>
+          <AutoSlideshow images={images} />  
           <div class="image-container"/> 
       </div>
     </div>
