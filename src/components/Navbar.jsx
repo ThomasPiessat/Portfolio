@@ -1,10 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css'
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      <h1>Thomas Piessat</h1>
+      <h1>
+        <Link to="/" className="nav-button">
+          Thomas Piessat
+        </Link>
+      </h1>
     </div>
   );
 };

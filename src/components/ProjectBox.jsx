@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import AutoSlideshow from './AutoSlideshow.jsx';
 import './ProjectBox.css'
 
@@ -8,7 +9,7 @@ const style = {
   width: '30%' 
 };
 
-const ProjectBox = ({title, description, images}) => {
+const ProjectBox = ({title, description, images, projectType}) => {
   useEffect(() => {
     // Any additional setup or cleanup code can go here
     return () => {
@@ -16,15 +17,19 @@ const ProjectBox = ({title, description, images}) => {
     };
   }, []);
 
+  const projectPath = `/${projectType.toLowerCase().replace(/\s/g, '-')}`;
+
   return (
-    <div style={style}>
-      <div class="component-project-box">
-          <h2>{title}</h2>
-          <p>{description}</p>
-          <AutoSlideshow images={images} />  
-          <div class="image-container"/> 
+    <Link to={projectPath}>
+      <div style={style}>
+        <div className="component-project-box">
+            <h2>{title}</h2>
+            <p>{description}</p>
+            <AutoSlideshow images={images} />  
+            <div className="image-container"/> 
+        </div>
       </div>
-    </div>
+   </Link>
   );
 }
 

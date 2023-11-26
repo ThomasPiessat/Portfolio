@@ -14,48 +14,48 @@ import Vue_Icon from '../assets/img/ICO/vue.png'
 
 function ToolsUsed() {
   return (
-    <div class="tools-container">
+    <div className="tools-container">
       <h1>Tools Used</h1>
       <ul>
-        <div class="tool-container">        
-          <img src={VS_Icon} alt="visual-basic" class="tool-image"></img>
-          <div class="tool-text">VS</div>
+        <div className="tool-container">        
+          <img src={VS_Icon} alt="visual-basic" className="tool-image"></img>
+          <div className="tool-text">VS</div>
         </div>
-        <div class="tool-container">
-          <img src={VSCode_Icon} alt="visual-code" class="tool-image"></img>
-          <div class="tool-text">VSCode</div>
+        <div className="tool-container">
+          <img src={VSCode_Icon} alt="visual-code" className="tool-image"></img>
+          <div className="tool-text">VSCode</div>
         </div>
-        <div class="tool-container">
-          <img src={C_Icon} alt="c" class="tool-image"></img>
-          <div class="tool-text">C</div>
+        <div className="tool-container">
+          <img src={C_Icon} alt="c" className="tool-image"></img>
+          <div className="tool-text">C</div>
         </div>
-        <div class="tool-container">
-          <img src={CPP_Icon} alt="cpp" class="tool-image"></img>
-          <div class="tool-text">C++</div>
+        <div className="tool-container">
+          <img src={CPP_Icon} alt="cpp" className="tool-image"></img>
+          <div className="tool-text">C++</div>
         </div>
-        <div class="tool-container">
-          <img src={CSharp_Icon} alt="c-sharp" class="tool-image"></img>
-          <div class="tool-text">C#</div>
+        <div className="tool-container">
+          <img src={CSharp_Icon} alt="c-sharp" className="tool-image"></img>
+          <div className="tool-text">C#</div>
         </div>
-        <div class="tool-container">
-          <img src={UE_Icon} alt="ue" class="tool-image"></img>
-          <div class="tool-text">UE4</div>
+        <div className="tool-container">
+          <img src={UE_Icon} alt="ue" className="tool-image"></img>
+          <div className="tool-text">UE4</div>
         </div>
-        <div class="tool-container">
-          <img src={Unity_Icon} alt="unity" class="tool-image"></img>
-          <div class="tool-text">Unity</div>
+        <div className="tool-container">
+          <img src={Unity_Icon} alt="unity" className="tool-image"></img>
+          <div className="tool-text">Unity</div>
         </div>
-        <div class="tool-container">
-          <img src={Git_Icon} alt="git-sharp" class="tool-image"></img>
-          <div class="tool-text">Git</div>
+        <div className="tool-container">
+          <img src={Git_Icon} alt="git-sharp" className="tool-image"></img>
+          <div className="tool-text">Git</div>
         </div>
-        <div class="tool-container">
-          <img src={Perforce_Icon} alt="perforce" class="tool-image"></img>
-          <div class="tool-text">P4V</div>
+        <div className="tool-container">
+          <img src={Perforce_Icon} alt="perforce" className="tool-image"></img>
+          <div className="tool-text">P4V</div>
         </div>
-        <div class="tool-container">
-          <img src={Vue_Icon} alt="vue" class="tool-image"></img>
-          <div class="tool-text">Vue</div>
+        <div className="tool-container">
+          <img src={Vue_Icon} alt="vue" className="tool-image"></img>
+          <div className="tool-text">Vue</div>
         </div>
       </ul>
     </div>

@@ -6,6 +6,15 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin-top: 60px; /* Adjust this value based on your navbar height */
+}
+
+body {
   font-family: JosefinFont, sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -14,7 +23,6 @@ body {
 main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 5rem;
 }
 
 footer {
