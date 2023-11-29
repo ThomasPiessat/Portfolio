@@ -9,6 +9,9 @@ const Navbar = () => {
         <Link to="/" className="nav-button">
           Thomas Piessat
         </Link>
+        <Link to="/" className="nav-button">
+          Github
+        </Link>
       </h1>
     </div>
   );

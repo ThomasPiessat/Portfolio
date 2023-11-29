@@ -1,6 +1,6 @@
 @font-face {
   font-family: JosefinFont;
-  src: local(JosefinFont), url('./fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('woff2');
+  src: local(JosefinFont), url('./assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('woff2');
   font-weight: normal;
   font-style: normal;
 }

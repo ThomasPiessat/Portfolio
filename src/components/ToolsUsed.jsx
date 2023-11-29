@@ -10,54 +10,34 @@ import Unity_Icon from '../assets/img/ICO/unity.png'
 import Git_Icon from '../assets/img/ICO/github.png'
 import Perforce_Icon from '../assets/img/ICO/perforce (1).png'
 import Vue_Icon from '../assets/img/ICO/vue.png'
-/*import React_Icon from '../assets/img/ICO/React.png'*/
+import React_Icon from '../assets/img/ICO/react.png'
+
+const toolsData = [
+  { icon: VS_Icon, alt: 'visual-basic', text: 'VS' },
+  { icon: VSCode_Icon, alt: 'visual-code', text: 'VSCode' },
+  { icon: C_Icon, alt: 'c', text: 'C' },
+  { icon: CPP_Icon, alt: 'cpp', text: 'C++' },
+  { icon: CSharp_Icon, alt: 'c-sharp', text: 'C#' },
+  { icon: UE_Icon, alt: 'ue', text: 'UE4' },
+  { icon: Unity_Icon, alt: 'unity', text: 'Unity' },
+  { icon: Git_Icon, alt: 'git-sharp', text: 'Git' },
+  { icon: Perforce_Icon, alt: 'perforce', text: 'P4V' },
+  { icon: Vue_Icon, alt: 'vue', text: 'Vue' },
+  { icon: React_Icon, alt: 'react', text: 'React' },
+];
 
 function ToolsUsed() {
   return (
     <div className="tools-container">
       <h1>Tools Used</h1>
       <ul>
-        <div className="tool-container">        
-          <img src={VS_Icon} alt="visual-basic" className="tool-image"></img>
-          <div className="tool-text">VS</div>
+      {toolsData.map((tool, index) => (
+        <div className="tool-container" key={index}>
+          <img src={tool.icon} alt={tool.alt} className="tool-image" />
+          <div className="tool-text">{tool.text}</div>
         </div>
-        <div className="tool-container">
-          <img src={VSCode_Icon} alt="visual-code" className="tool-image"></img>
-          <div className="tool-text">VSCode</div>
-        </div>
-        <div className="tool-container">
-          <img src={C_Icon} alt="c" className="tool-image"></img>
-          <div className="tool-text">C</div>
-        </div>
-        <div className="tool-container">
-          <img src={CPP_Icon} alt="cpp" className="tool-image"></img>
-          <div className="tool-text">C++</div>
-        </div>
-        <div className="tool-container">
-          <img src={CSharp_Icon} alt="c-sharp" className="tool-image"></img>
-          <div className="tool-text">C#</div>
-        </div>
-        <div className="tool-container">
-          <img src={UE_Icon} alt="ue" className="tool-image"></img>
-          <div className="tool-text">UE4</div>
-        </div>
-        <div className="tool-container">
-          <img src={Unity_Icon} alt="unity" className="tool-image"></img>
-          <div className="tool-text">Unity</div>
-        </div>
-        <div className="tool-container">
-          <img src={Git_Icon} alt="git-sharp" className="tool-image"></img>
-          <div className="tool-text">Git</div>
-        </div>
-        <div className="tool-container">
-          <img src={Perforce_Icon} alt="perforce" className="tool-image"></img>
-          <div className="tool-text">P4V</div>
-        </div>
-        <div className="tool-container">
-          <img src={Vue_Icon} alt="vue" className="tool-image"></img>
-          <div className="tool-text">Vue</div>
-        </div>
-      </ul>
+      ))}
+    </ul>
     </div>
   );
 }

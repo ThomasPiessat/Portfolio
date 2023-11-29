@@ -2,18 +2,17 @@ import './App.css'
 
 import { Routes, Route, Link } from 'react-router-dom';
 
+import projectsData from "./projectsData";
 import Navbar from './components/Navbar.jsx';
 import ProfileDescription from './components/ProfileDescription.jsx';
 import ToolsUsed from './components/ToolsUsed.jsx';
 import Experience from './components/Experience.jsx';
 import ProjectBox from './components/ProjectBox.jsx';
-import PersonalProjectsPage from './PersonalProjectsPage';
 // import ProfessionalProjectsPage from './components/ProjectsPages/ProfessionalProjectsPage';
 // import StudentProjectsPage from './components/ProjectsPages/StudentProjectsPage';
 
-import PCG_Overview from './assets/img/PCG/CityAlongsideRoad.png'
-import PCG_CirtyGeneration from './assets/img/PCG/CityGeneration.png'
-import PCG_CityRoad from './assets/img/PCG/CityAlongsideRoad.png'
+// LEGALS
+import Mentions from "./components/pages/Legals/Mentions.jsx";
 
 const styles = {
   display: 'flex',
@@ -21,18 +20,16 @@ const styles = {
   justifyContent: 'center',
 };
 
-const personalProjectImages = [PCG_Overview,PCG_CirtyGeneration,PCG_CityRoad ];
-
 const personalProjects = [
-  { id: 1, title: 'Procedural Content Generation', description: 'Procedural City Generation', images: [PCG_Overview,PCG_CirtyGeneration,PCG_CityRoad ] },
-  { id: 2, title: 'Personnal P2', description: 'Personnal P2 description', images: [PCG_Overview,PCG_CirtyGeneration,PCG_CityRoad ] },
-  { id: 3, title: 'Personnal P3', description: 'Personnal P3 description', images: [PCG_Overview,PCG_CirtyGeneration,PCG_CityRoad ] },
+  { id: 1, title: 'Procedural Content Generation', description: 'Procedural City Generation', images: [projectsData.PCG_Overview, projectsData.PCG_CirtyGeneration, projectsData.PCG_CityRoad ] },
+  { id: 2, title: 'Personnal P2', description: 'Personnal P2 description', images: [projectsData.PCG_Overview, projectsData.PCG_CirtyGeneration, projectsData.PCG_CityRoad ] },
+  { id: 3, title: 'Personnal P3', description: 'Personnal P3 description', images: [projectsData.PCG_Overview, projectsData.PCG_CirtyGeneration, projectsData.PCG_CityRoad ] },
 ];
 
 const professionalProject = [
-  { id: 1, title: 'Professional', description: 'Professional', images: [PCG_Overview,PCG_CirtyGeneration,PCG_CityRoad ] },
-  { id: 2, title: 'Professional  P2', description: 'Professional P2 description', images: [PCG_Overview,PCG_CirtyGeneration,PCG_CityRoad ] },
-  { id: 3, title: 'Professional P3', description: 'Professional P3 description', images: [PCG_Overview,PCG_CirtyGeneration,PCG_CityRoad ] },
+  { id: 1, title: 'Professional', description: 'Professional', images: [projectsData.PCG_Overview, projectsData.PCG_CirtyGeneration, projectsData.PCG_CityRoad ] },
+  { id: 2, title: 'Professional  P2', description: 'Professional P2 description', images: [projectsData.PCG_Overview, projectsData.PCG_CirtyGeneration, projectsData.PCG_CityRoad ] },
+  { id: 3, title: 'Professional P3', description: 'Professional P3 description', images: [projectsData.PCG_Overview, projectsData.PCG_CirtyGeneration, projectsData.PCG_CityRoad ] },
 ];
 
 
@@ -54,7 +51,7 @@ const AllProfessionalProjectsBox = () => (
 
 const App = () => (
   <div>
-    <nav className="navbar">
+    <nav className="navbar"> 
       <Navbar />
     </nav>
     <main>
