@@ -17,7 +17,7 @@
 
 .component-project-box:hover {
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-  transform: scale(1.1); /* Increase size by 10% on hover */
+  transform: scale(1.02); /* Increase size by 10% on hover */
 }
 
 .component-project-box:hover .image-container img.active {

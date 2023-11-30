@@ -9,8 +9,14 @@ const Navbar = () => {
         <Link to="/" className="nav-button">
           Thomas Piessat
         </Link>
-        <Link to="/" className="nav-button">
+        <a href="https://github.com/ThomasPiessat" target="_blank" className="nav-button">
           Github
+        </a>
+        <Link to="/ProjectsShow" target="_blank" className="nav-button">
+          Projects
+        </Link>
+        <Link to="/Contact" target="_blank" className="nav-button">
+          Contact
         </Link>
       </h1>
     </div>

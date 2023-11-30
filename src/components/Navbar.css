@@ -8,7 +8,7 @@
     background-clip: padding-box; /* Allows content to be visible behind the navbar */
   }  
 
-  .nav-button {
+.nav-button {
   text-decoration: none; /* Remove the default underline on the link */
   color: #fff; /* Set the text color to white or your desired color */
   cursor: pointer; /* Set the cursor to indicate it's clickable */
@@ -21,6 +21,6 @@
   /* Additional styles as needed */
 }
 
-  .nav-button:hover {
+.nav-button:hover {
     background-color: #555; /* Change background color on hover */
-  }
+}
