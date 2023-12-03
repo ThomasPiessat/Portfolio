@@ -1,13 +1,13 @@
 import React from 'react';
 import Experience from './Experience';
-import './ExperienceBox.css'
+import './Experiences.css'
 
 const experiencesData = [
   { title:"Education", xpTitle:"Objectif 3D - Gameplay programmer", date:"2017-2020", location:"Montpellier, France" },
   { title:"Professional Experience", xpTitle:"Software Engineer", date:"2020-Present", location:"Black Shamrock - a Virtuos Studio, Dublin" },
 ]
 
-const ExperienceBox = () => {
+const Experiences = () => {
   return (
       <div className="experience-container-box">
       {experiencesData.map((experience, index) => (
@@ -23,4 +23,4 @@ const ExperienceBox = () => {
   );
 };
     
-export default ExperienceBox;
+export default Experiences;
