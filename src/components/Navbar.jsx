@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import './Navbar.css'
 
 const Navbar = () => {
@@ -12,9 +13,16 @@ const Navbar = () => {
         <a href="https://github.com/ThomasPiessat" target="_blank" className="nav-button">
           Github
         </a>
-        <Link to="/projects" target="_blank" className="nav-button">
+        <ScrollLink
+          to="projects"
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={-70} // Adjust the offset as needed
+          className="nav-button"
+        >
           Projects
-        </Link>
+        </ScrollLink>
         <Link to="/Contact" target="_blank" className="nav-button">
           Contact
         </Link>

@@ -9,7 +9,7 @@ const style = {
   width: '30%' 
 };
 
-const ProjectBox = ({title, description, images, projectType}) => {
+const ProjectBox = ({category,title, description, images, projectType}) => {
   useEffect(() => {
     // Any additional setup or cleanup code can go here
     return () => {
@@ -27,6 +27,7 @@ const ProjectBox = ({title, description, images, projectType}) => {
             <p>{description}</p>
             <AutoSlideshow images={images} />  
             <div className="image-container"/> 
+            <Link to={`/projects/${category}/${title}`}>View Details</Link>
         </div>
       </div>
    </Link>

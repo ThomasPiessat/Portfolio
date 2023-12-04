@@ -1,26 +1,28 @@
 .navbar {
-    background-color: #333; /* Set your desired background color */
-    color: white; /* Set your desired text color */
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Ensure the navbar appears above other elements */
-    background-clip: padding-box; /* Allows content to be visible behind the navbar */
-  }  
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+}
 
 .nav-button {
-  text-decoration: none; /* Remove the default underline on the link */
-  color: #fff; /* Set the text color to white or your desired color */
-  cursor: pointer; /* Set the cursor to indicate it's clickable */
-  padding: 10px 20px; /* Add padding to make it look like a button */
-  background-color: #1d1818; /* Set the background color to match your navbar */
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #0a6f8b;
   border: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease; /* Add a smooth transition effect on hover */
-
-  /* Additional styles as needed */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-button:hover {
-    background-color: #555; /* Change background color on hover */
+  background-color: #061424;
+  transform: scale(1.05);
 }
