@@ -4,8 +4,9 @@ import { Routes, Route, Link } from 'react-router-dom';
 
 import Navbar from './components/Navbar.jsx';
 import ProfileDescription from './components/ProfileDescription.jsx';
-import ToolsUsed from './components/ToolsUsed.jsx';
 import Experiences from './components/Experiences/Experiences.jsx';
+import ToolsUsed from './components/ToolsUsed.jsx';
+import ProjectsShow from './components/ProjectsPages/ProjectsShow.jsx';
 import Projects from './components/ProjectsPages/Projects.jsx';
 
 // LEGALS
@@ -20,7 +21,7 @@ const App = () => (
       <ProfileDescription />
       <Experiences />
       <ToolsUsed />
-      <Projects />
+      <ProjectsShow />
       <Routes>
         <Route path="/projects/*" element={<Projects />} />
       </Routes>

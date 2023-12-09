@@ -5,7 +5,7 @@
   border-radius: 8px;
   margin: auto;
   width: 90%;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   position: relative;
 }
@@ -16,12 +16,14 @@
   margin-right: 2%;
   position: relative;
   display: inline-block;
+  overflow: hidden; /* Hide overflowing content */
 }
 
 .tool-image {
   display: block;
   width: 60px;
   height: 60px;
+  transition: transform 0.3s ease;
 }
 
 .tool-text {
@@ -37,10 +39,15 @@
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 .tool-container:hover .tool-text {
   visibility: visible;
   opacity: 1;
+  bottom: 0;
+}
+
+.tool-container:hover .tool-image {
+  transform: translateY(-20px); /* Adjust the translateY value as needed */
 }

@@ -1,29 +1,19 @@
 import React from 'react';
+import { icons } from '../projectsData';
 import './ToolsUsed.css';
-import VS_Icon from '../assets/img/ICO/visual-basic.png'
-import VSCode_Icon from '../assets/img/ICO/visual-code.png'
-import C_Icon from '../assets/img/ICO/c.png'
-import CPP_Icon from '../assets/img/ICO/cpp.png'
-import CSharp_Icon from '../assets/img/ICO/c-sharp.png'
-import UE_Icon from '../assets/img/ICO/unreal-engine.png'
-import Unity_Icon from '../assets/img/ICO/unity.png'
-import Git_Icon from '../assets/img/ICO/github.png'
-import Perforce_Icon from '../assets/img/ICO/perforce (1).png'
-import Vue_Icon from '../assets/img/ICO/vue.png'
-import React_Icon from '../assets/img/ICO/react.png'
 
 const toolsData = [
-  { icon: VS_Icon, alt: 'visual-basic', text: 'VS' },
-  { icon: VSCode_Icon, alt: 'visual-code', text: 'VSCode' },
-  { icon: C_Icon, alt: 'c', text: 'C' },
-  { icon: CPP_Icon, alt: 'cpp', text: 'C++' },
-  { icon: CSharp_Icon, alt: 'c-sharp', text: 'C#' },
-  { icon: UE_Icon, alt: 'ue', text: 'UE4' },
-  { icon: Unity_Icon, alt: 'unity', text: 'Unity' },
-  { icon: Git_Icon, alt: 'git-sharp', text: 'Git' },
-  { icon: Perforce_Icon, alt: 'perforce', text: 'P4V' },
-  { icon: Vue_Icon, alt: 'vue', text: 'Vue' },
-  { icon: React_Icon, alt: 'react', text: 'React' },
+  { icon: icons.VS_Icon, alt: 'visual-basic', text: 'VS' },
+  { icon: icons.VSCode_Icon, alt: 'visual-code', text: 'VSCode' },
+  { icon: icons.C_Icon, alt: 'c', text: 'C' },
+  { icon: icons.CPP_Icon, alt: 'cpp', text: 'C++' },
+  { icon: icons.CSharp_Icon, alt: 'c-sharp', text: 'C#' },
+  { icon: icons.UE_Icon, alt: 'ue', text: 'UE4/5' },
+  { icon: icons.Unity_Icon, alt: 'unity', text: 'Unity' },
+  { icon: icons.Git_Icon, alt: 'git-sharp', text: 'Git' },
+  { icon: icons.Perforce_Icon, alt: 'perforce', text: 'P4V' },
+  { icon: icons.Vue_Icon, alt: 'vue', text: 'Vue' },
+  { icon: icons.React_Icon, alt: 'react', text: 'React' },
 ];
 
 function ToolsUsed() {

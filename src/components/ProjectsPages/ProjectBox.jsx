@@ -1,13 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import AutoSlideshow from './AutoSlideshow.jsx';
+import AutoSlideshow from '../AutoSlideshow.jsx';
 import './ProjectBox.css'
-
-const style = {
-  margin: '10px', 
-  padding: '15px', 
-  width: '30%' 
-};
 
 const ProjectBox = ({category,title, description, images, projectType}) => {
   useEffect(() => {
@@ -17,20 +11,18 @@ const ProjectBox = ({category,title, description, images, projectType}) => {
     };
   }, []);
 
-  const projectPath = `/${projectType.toLowerCase().replace(/\s/g, '-')}`;
+  // const projectPath = `/${projectType.toLowerCase().replace(/\s/g, '-')}`;
 
   return (
-    <Link to={projectPath}>
-      <div style={style}>
-        <div className="component-project-box">
-            <h2>{title}</h2>
-            <p>{description}</p>
-            <AutoSlideshow images={images} />  
-            <div className="image-container"/> 
-            <Link to={`/projects/${category}/${title}`}>View Details</Link>
-        </div>
+    // <Link to={projectPath}>
+      <div className="component-project-box">
+          <h2>{title}</h2>
+          <p>{description}</p>
+          <AutoSlideshow images={images} />  
+          <div className="image-container"/> 
+          <Link to={`/projects/${category}/${title}`}>View Details</Link>
       </div>
-   </Link>
+  //  </Link>
   );
 }
 
