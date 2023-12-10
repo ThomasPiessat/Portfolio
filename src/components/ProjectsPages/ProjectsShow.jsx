@@ -1,13 +1,8 @@
 import React from "react";
 import { images } from  "../../projectsData.js";
 import { Element } from 'react-scroll';
+import "./ProjectsShow.css"
 import ProjectBox from './ProjectBox.jsx';
-
-const styles = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  };
 
 const personalProjectImages = [images.PCG_Overview, images.PCG_CirtyGeneration, images.PCG_CityRoad ];
 
@@ -26,10 +21,11 @@ const personalProjectImages = [images.PCG_Overview, images.PCG_CirtyGeneration, 
 const ProjectsShow = () => {
     return (
     <Element name="projects">
-        <div style={styles}>
+        <div className="projectsBox-container">
           <ProjectBox title="Personal Project" description={"Projects that I did during my free time"} images={personalProjectImages} projectType="Personal Projects"/>
           <ProjectBox title="Professional Project" description={"Projects that I did in studios"} />
           <ProjectBox title="Student Project" description={"Projects that I did during my studies"} />
+          {/* <ProjectBox title="All Projects" description="See all projects" /> */}
         </div>
     </Element>
     );

@@ -1,16 +1,15 @@
 .component-project-box {
-  margin-top: 5%;
-  margin-left: 2%;
-  margin-right: 2%;
-  background-color: aqua;
+  background-color: #282c34;
+  color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   text-align: center;
   position: relative;
   display: inline-block;
-  width: 400px;
+  width: 450px;
   height: 400px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
   cursor: pointer;
   transition: box-shadow 0.3s, transform 0.3s;
 }

@@ -1,0 +1,9 @@
+.projectsBox-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}

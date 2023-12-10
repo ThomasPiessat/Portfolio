@@ -1,11 +1,11 @@
 .tools-container {
-  background-color: #333;
+  background-color: #282c34;
   color: #fff;
-  border: 1px solid #ccc;
   border-radius: 8px;
   margin: auto;
   width: 90%;
   padding: 10px;
+  margin-top: 5%;
   text-align: center;
   position: relative;
 }
