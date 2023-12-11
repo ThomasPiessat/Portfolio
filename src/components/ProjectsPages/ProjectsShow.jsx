@@ -25,7 +25,7 @@ const ProjectsShow = () => {
           <ProjectBox title="Personal Project" description={"Projects that I did during my free time"} images={personalProjectImages} projectType="Personal Projects"/>
           <ProjectBox title="Professional Project" description={"Projects that I did in studios"} />
           <ProjectBox title="Student Project" description={"Projects that I did during my studies"} />
-          {/* <ProjectBox title="All Projects" description="See all projects" /> */}
+          <ProjectBox title="All Projects" description="See all projects" />
         </div>
     </Element>
     );

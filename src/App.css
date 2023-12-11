@@ -21,11 +21,11 @@ body {
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
-footer {
+/* footer {
   background-color: #333;
   color: #fff;
   text-align: center;
@@ -34,4 +34,4 @@ footer {
 
 footer p {
   margin: 0;
-}
+} */

@@ -26,9 +26,9 @@ const App = () => (
         <Route path="/projects/*" element={<Projects />} />
       </Routes>
     </main>
-    <footer>
+    {/* <footer>
         <p>Copyright information and other legal information</p>
-      </footer>
+    </footer> */}
   </div>
 );
 
