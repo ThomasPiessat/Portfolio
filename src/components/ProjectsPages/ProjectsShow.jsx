@@ -13,8 +13,8 @@ const personalProjectImages = [images.PCG_Overview, images.PCG_CirtyGeneration, 
 // ];
 
 // const professionalProject = [
-//   { id: 1, title: 'Professional', description: 'Professional', images: [projectsData.PCG_Overview, projectsData.PCG_CirtyGeneration, projectsData.PCG_CityRoad ] },
-//   { id: 2, title: 'Professional  P2', description: 'Professional P2 description', images: [projectsData.PCG_Overview, projectsData.PCG_CirtyGeneration, projectsData.PCG_CityRoad ] },
+//   { id: 1, title: 'Professiona},
+//   { id: 2, title: 'Professional  P2', description: 'Professional P2 description', images: [projectsData.PCG_Overview, projectsData.PCG_CirtyGenl', description: 'Professional', images: [projectsData.PCG_Overview, projectsData.PCG_CirtyGeneration, projectsData.PCG_CityRoad ] eration, projectsData.PCG_CityRoad ] },
 //   { id: 3, title: 'Professional P3', description: 'Professional P3 description', images: [projectsData.PCG_Overview, projectsData.PCG_CirtyGeneration, projectsData.PCG_CityRoad ] },
 // ];
 
@@ -22,10 +22,10 @@ const ProjectsShow = () => {
     return (
     <Element name="projects">
         <div className="projectsBox-container">
-          <ProjectBox title="Personal Project" description={"Projects that I did during my free time"} images={personalProjectImages} projectType="Personal Projects"/>
-          <ProjectBox title="Professional Project" description={"Projects that I did in studios"} />
-          <ProjectBox title="Student Project" description={"Projects that I did during my studies"} />
-          <ProjectBox title="All Projects" description="See all projects" />
+          <ProjectBox category="PersonalProject" title="Personal Project" description={"Projects that I did during my free time"} images={personalProjectImages} projectType="Personal Projects"/>
+          <ProjectBox category="ProfesionalProject" title="Professional Project" description={"Projects that I did in studios"} />
+          <ProjectBox category="personal" title="Student Project" description={"Projects that I did during my studies"} />
+          <ProjectBox category="personal" title="All Projects" description="See all projects" />
         </div>
     </Element>
     );

@@ -1,6 +1,10 @@
+:root {
+  --bg-color: #282c34;
+  --text-color : white;
+}
+
 .navbar {
-  background-color: #282c34;
-  color: white;
+  background-color: var(--bg-color);
   padding: 20px;
   position: sticky;
   top: 0;
@@ -12,7 +16,7 @@
 
 .nav-button {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   cursor: pointer;
   padding: 10px 20px;
   margin: 0 10px;

@@ -18,7 +18,7 @@ const Navbar = () => {
           smooth={true}
           duration={500}
           spy={true}
-          offset={-70} // Adjust the offset as needed
+          offset={-150} // Adjust the offset as needed
           className="nav-button"
         >
           Projects
