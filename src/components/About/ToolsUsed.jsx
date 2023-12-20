@@ -1,5 +1,5 @@
 import React from 'react';
-import { icons } from '../projectsData';
+import { icons } from '../../../src/projectsData';
 import './ToolsUsed.css';
 
 const toolsData = [

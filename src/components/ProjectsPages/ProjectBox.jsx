@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import AutoSlideshow from '../AutoSlideshow.jsx';
 import './ProjectBox.css'
 
-const ProjectBox = ({category, title, description, images, projectType}) => {
+function  ProjectBox ({category, title, description, images, projectType})
+{
   useEffect(() => {
     // Any additional setup or cleanup code can go here
     return () => {

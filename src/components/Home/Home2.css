@@ -1,0 +1,32 @@
+/* Home2.css */
+
+/* Style for the home about section */
+.home-about-section {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Style for the description within the home about section */
+.home-about-description {
+  text-align: left;
+}
+
+/* Style for the heading within the description */
+.home-about-description h1 {
+  font-size: 2.6em;
+  color: #333; /* Change the color to your desired text color */
+}
+
+/* Style for the main content within the description */
+.home-about-description p {
+  font-size: 1.2em;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Style for strong tag within the description */
+.home-about-description strong {
+  font-weight: bold;
+  color: #333; /* Change the color to your desired text color */
+}

@@ -1,36 +1,31 @@
-import './App.css'
-
-import { Routes, Route } from 'react-router-dom';
-
-import Navbar from './components/Navbar.jsx';
-import ProfileDescription from './components/ProfileDescription.jsx';
-import Experiences from './components/Experiences/Experiences.jsx';
-import ToolsUsed from './components/ToolsUsed.jsx';
+import React, { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home/Home";
+import About from "./components/About/About.jsx"
 import ProjectsShow from './components/ProjectsPages/ProjectsShow.jsx';
-import PersonalProjectsPage from './components/ProjectsPages/PersonalProjectsPage.jsx'
-import ProfessionalProjectsPage from './components/ProjectsPages/ProfessionalProjectsPage.jsx'
-// LEGALS
-import Mentions from "./components/pages/Legals/Mentions.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
-const App = () => (
-  <div>
-    <nav className="navbar"> 
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate
+} from "react-router-dom";
+
+
+function App() {
+  return (
+    <Router>
       <Navbar />
-    </nav>
-    <main>
-      <ProfileDescription />
-      <Experiences />
-      <ToolsUsed />
-      <ProjectsShow />
       <Routes>
-        <Route path="/projects/PersonalProject" element={<PersonalProjectsPage />} />
-        <Route path="/projects/ProfesionalProject" element={<ProfessionalProjectsPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/project" element={<ProjectsShow />} />
+        <Route path="*" element={<Navigate to="/"/>} />
       </Routes>
-    </main>
-    {/* <footer>
-        <p>Copyright information and other legal information</p>
-    </footer> */}
-  </div>
-);
+      <Footer />
+  </Router>
+  );
+}
 
 export default App;
