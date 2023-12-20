@@ -1,10 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { images } from  "../../projectsData.js";
+import { imagesPerso, imagesPro, imagesStud } from  "../../projectsData.js";
 import "./ProjectsShow.css"
 import ProjectBox from './ProjectBox.jsx';
 
-const personalProjectImages = [images.PCG_Overview, images.PCG_CirtyGeneration, images.PCG_CityRoad ];
+const personalProjectImages = [imagesPerso.PCG_Overview, imagesPerso.PCG_CirtyGeneration, imagesPerso.PCG_CityRoad ];
+const professionalProjectImages = [];
+const studentProjectImages = [];
 
 // const personalProjects = [
 //   { id: 1, title: 'Procedural Content Generation', description: 'Procedural City Generation', images: [projectsData.PCG_Overview, projectsData.PCG_CirtyGeneration, projectsData.PCG_CityRoad ] },
@@ -21,24 +23,24 @@ const personalProjectImages = [images.PCG_Overview, images.PCG_CirtyGeneration, 
 function ProjectsShow() {
     return (
       <Container fluid className="project-section">
-        <Container>
         <div className="projectsBox-container">
           <ProjectBox 
             category="PersonalProject" 
             title="Personal Project" 
             description={"Projects that I did during my free time"} 
             images={personalProjectImages} 
-            projectType="Personal Projects"
           />
           <ProjectBox 
             category="ProfesionalProject" 
             title="Professional Project" 
             description={"Projects that I did in studios"} 
+            images={professionalProjectImages}
           />
           <ProjectBox 
             category="personal" 
             title="Student Project" 
             description={"Projects that I did during my studies"} 
+            images={studentProjectImages}
           />
           <ProjectBox 
             category="personal" 
@@ -46,7 +48,6 @@ function ProjectsShow() {
             description="See all projects" 
           />
         </div>
-        </Container>
       </Container>
     );
 }

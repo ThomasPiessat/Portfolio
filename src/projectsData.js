@@ -17,11 +17,19 @@ import Vue_Icon from '../src/assets/img/ICO/vue.png'
 import React_Icon from '../src/assets/img/ICO/react.png'
 
 // Export all images
-export const images = {
+export const imagesPerso = {
     PCG_Overview,
     PCG_CirtyGeneration,
     PCG_CityRoad
 };
+
+export const imagesPro = {
+
+}
+
+export const imagesStud = {
+
+}
 
 // Export all icons
 export const icons = {
