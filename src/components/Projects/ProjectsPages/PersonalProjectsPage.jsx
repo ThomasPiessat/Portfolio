@@ -1,5 +1,4 @@
 import React from 'react';
-import '../..'
 
 const PersonalProjectsPage = ({ personalProjects }) => {
   return (

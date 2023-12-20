@@ -22,3 +22,17 @@
 .component-project-box:hover .image-container img.active {
   opacity: 1;
 }
+
+.view-details {
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Adjust as needed to horizontally center */
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #0a6f8b;
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+}

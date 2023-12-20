@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import AutoSlideshow from '../AutoSlideshow.jsx';
+import Nav from "react-bootstrap/Nav";
+import AutoSlideshow from '../../components/AutoSlideshow.jsx';
 import './ProjectBox.css'
 
 function  ProjectBox ({category, title, description, images})
@@ -12,14 +13,20 @@ function  ProjectBox ({category, title, description, images})
     };
   }, []);
 
-  //const projectPath = `/${projectType.toLowerCase().replace(/\s/g, '-')}`;
-
   return (
       <div className="component-project-box">
         <h2>{title}</h2>
         <p>{description}</p>
-        <AutoSlideshow images={images} />  
-        <Link to={`/projects/${category}`}>View Details</Link>
+        <div className="slideshow">
+          <AutoSlideshow images={images} />  
+        </div>
+          <Nav.Link
+              as={Link}
+              to={`/project/${category}`}
+              className="view-details"
+          >
+            View Details
+          </Nav.Link>
       </div>
   );
 }

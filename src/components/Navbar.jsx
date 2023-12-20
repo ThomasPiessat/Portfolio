@@ -31,7 +31,7 @@ function NavBar() {
             Projects
           </Nav.Link>
       
-          <a href="https://github.com/ThomasPiessat" target="_blank" className="nav-button">
+          <a href="https://github.com/ThomasPiessat" target="_blank" rel="noopener noreferrer" className="nav-button">
             Github
           </a>     
         </Nav>
