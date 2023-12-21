@@ -3,9 +3,10 @@
   color: var(--text-color);
   border-radius: 8px;
   margin: auto;
-  width: 90%;
+  width: 70%;
   padding: 10px;
   margin-top: 5%;
+  margin-bottom: 5%;
   text-align: center;
   position: relative;
 }
@@ -30,6 +31,7 @@
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.8);
   color: var(--text-color);
+  font-size: medium;
   text-align: center;
   border-radius: 4px;
   padding: 5px;

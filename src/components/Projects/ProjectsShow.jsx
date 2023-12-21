@@ -9,35 +9,41 @@ const professionalProjectImages = [];
 const studentProjectImages = [];
 
 function ProjectsShow() {
-    return (
-      <Container fluid className="project-section">
-        <div className="projectsBox-container">
-          <ProjectBox 
-            category="PersonalProject" 
-            title="Personal Project" 
-            description={"Projects that I did during my free time"} 
-            images={personalProjectImages} 
-          />
-          <ProjectBox 
-            category="ProfessionalProject" 
-            title="Professional Project" 
-            description={"Projects that I did in studios"} 
-            images={professionalProjectImages}
-          />
-          <ProjectBox 
-            category="StudentProject" 
-            title="Student Project" 
-            description={"Projects that I did during my studies"} 
-            images={studentProjectImages}
-          />
-          <ProjectBox 
-            category="personal" 
-            title="All Projects" 
-            description="See all projects" 
-          />
-        </div>
-      </Container>
-    );
+  const projectCategories = [
+    {
+      category: "PersonalProject",
+      title: "Personal Project",
+      description: "Projects that I did during my free time",
+      images: personalProjectImages,
+    },
+    {
+      category: "ProfessionalProject",
+      title: "Professional Project",
+      description: "Projects that I did in studios",
+      images: professionalProjectImages,
+    },
+    {
+      category: "StudentProject",
+      title: "Student Project",
+      description: "Projects that I did during my studies",
+      images: studentProjectImages,
+    },
+    {
+      category: "AllProjects",
+      title: "All Projects",
+      description: "See all projects",
+    },
+  ];
+
+  return (
+    <Container fluid className="project-section">
+      <div className="projectsBox-container">
+        {projectCategories.map((categoryData) => (
+          <ProjectBox key={categoryData.category} {...categoryData} />
+        ))}
+      </div>
+    </Container>
+  );
 }
 
 export default ProjectsShow;
