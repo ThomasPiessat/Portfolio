@@ -2,6 +2,11 @@
 import PCG_Overview from './assets/img/PCG/CityAlongsideRoad.png'
 import PCG_CirtyGeneration from './assets/img/PCG/CityGeneration.png'
 import PCG_CityRoad from './assets/img/PCG/CityAlongsideRoad.png'
+//accel
+import Accel_Overview from './assets/img/studentsProjects/accel/accelSteam.jpg'
+import Accel_Gameplay1 from './assets/img/studentsProjects/accel/accelGameplay.jpg'
+import Accel_Gameplay2 from './assets/img/studentsProjects/accel/accelGameplay2.jpg'
+
 
 // Import all icons
 import VS_Icon from '../src/assets/img/ICO/visual-basic.png'
@@ -28,7 +33,9 @@ export const imagesPro = {
 }
 
 export const imagesStud = {
-
+    Accel_Overview ,
+    Accel_Gameplay1,
+    Accel_Gameplay2
 }
 
 // Export all icons
