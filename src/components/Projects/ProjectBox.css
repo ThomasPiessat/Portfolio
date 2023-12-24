@@ -30,6 +30,13 @@
   height: 200px;
 }
 
+.each-slide-effect span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+
 .view-details {
   position: absolute;
   text-align: center;

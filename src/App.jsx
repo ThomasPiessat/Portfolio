@@ -5,6 +5,8 @@ import About from "./components/About/About.jsx"
 import ProjectsShow from './components/Projects/ProjectsShow.jsx';
 import ProfessionalProjectsPage from "./components/Projects/ProjectsPages/ProfessionalProjectsPage.jsx";
 import StudentProjectsPage from "./components/Projects/ProjectsPages/StudentProjectsPage.jsx";
+import { projects } from "./projectsData.js";
+import DetailedProjectPage from './components/Projects/ProjectsPages/DetailedProjectPage.jsx';
 import Footer from "./components/Footer/Footer.jsx";
 
 import {
@@ -25,6 +27,7 @@ function App() {
         <Route path="/project" element={<ProjectsShow />} />
         <Route path="/project/ProfessionalProject" element={<ProfessionalProjectsPage />} />
         <Route path="/project/StudentProject" element={<StudentProjectsPage />} />
+        <Route path="/project/:projectId" element={<DetailedProjectPage projects={projects} />} />
         <Route path="*" element={<Navigate to="/"/>} />
       </Routes>
       <Footer />

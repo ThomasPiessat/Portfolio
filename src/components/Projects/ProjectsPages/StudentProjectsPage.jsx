@@ -15,7 +15,7 @@ function StudentProjectsPage() {
         <h2>Students Projects</h2>
         <div style={{ display: 'flex' }}>
           {studentProject.map((project) => (
-            <ProjectBox key={project.id} title={project.title} images={project.images} />
+            <ProjectBox category={project.title} title={project.title} images={project.images} />
           ))}
         </div>
       </div>

@@ -25,7 +25,9 @@ const properties = {
             <Slide indicators={true} {...properties} images={images.map((image) => ({ source: image }))} autoplay duration={5000}>
               {images.map((image, index) => (
                 <div key={index} className="each-slide-effect">
-                  <div style={{ backgroundImage: `url(${image})` }} />
+                  <div style={{ backgroundImage: `url(${image})` }}>
+                    <span>{getImageName(image)}</span>
+                  </div>
                 </div>
               ))}
             </Slide>
@@ -38,6 +40,13 @@ const properties = {
           </Nav.Link>
       </div>
   );
+}
+
+function getImageName(path) {
+  const pathArray = path.split('/');
+  const fileNameWithExtension = pathArray[pathArray.length - 1];
+  const [fileNameWithoutExtension] = fileNameWithExtension.split('.');
+  return fileNameWithoutExtension;
 }
 
 export default ProjectBox;

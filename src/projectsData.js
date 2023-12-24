@@ -52,3 +52,19 @@ export const icons = {
     Vue_Icon,
     React_Icon,
 }
+
+export const projects = [
+    {
+      id: 1,
+      title: 'Accel',
+      introduction: 'Lorem ipsum...',
+      projectType: 'Personal',
+      engine: 'Unity',
+      language: 'C#',
+      team: 'Solo',
+      time: '3 months',
+      period: '2022',
+      aboutTheGame: 'Details about the game...',
+    },
+    // Add more projects as needed
+  ];

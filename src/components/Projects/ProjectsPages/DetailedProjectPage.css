@@ -1,0 +1,24 @@
+.detailed-project {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.detailed-project h2 {
+  color: #333;
+}
+
+.detailed-project p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.detailed-project strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Add additional styles as needed */
