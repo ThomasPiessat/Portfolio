@@ -5,8 +5,8 @@ import "./ProjectsShow.css"
 import ProjectBox from './ProjectBox.jsx';
 
 const personalProjectImages = [imagesPerso.PCG_Overview, imagesPerso.PCG_CirtyGeneration, imagesPerso.PCG_CityRoad ];
-const professionalProjectImages = [];
-const studentProjectImages = [];
+const professionalProjectImages = [imagesPerso.PCG_Overview, imagesPerso.PCG_CirtyGeneration, imagesPerso.PCG_CityRoad ];
+const studentProjectImages = [imagesStud.Accel_Overview, imagesPerso.PCG_CirtyGeneration, imagesPerso.PCG_CityRoad ];
 
 function ProjectsShow() {
   const projectCategories = [
@@ -32,6 +32,10 @@ function ProjectsShow() {
       category: "AllProjects",
       title: "All Projects",
       description: "See all projects",
+      images: personalProjectImages.concat(
+        professionalProjectImages,
+        studentProjectImages
+      ),
     },
   ];
 

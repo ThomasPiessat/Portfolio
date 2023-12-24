@@ -10,7 +10,6 @@
   display: inline-block;
   width: 450px;
   height: 400px;
-  /* cursor: pointer; */
   transition: box-shadow 0.3s, transform 0.3s;
 }
 
@@ -23,10 +22,19 @@
   opacity: 1;
 }
 
+.each-slide-effect > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 200px;
+}
+
 .view-details {
   position: absolute;
-  bottom: 0;
-  left: 50%; /* Adjust as needed to horizontally center */
+  text-align: center;
+  margin-top: 1%;
+  left: 50%; 
   transform: translate(-50%, -50%);
   padding: 10px 20px;
   background-color: #0a6f8b;
