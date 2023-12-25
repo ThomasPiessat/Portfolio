@@ -5,7 +5,7 @@ import './DetailedProjectPage.css'
 function DetailedProjectPage({ projects }) {
   
     // Find the project based on category and projectId
-    const project = projects.find((p) => p.projectType === "StudentProject");
+    const project = projects.find((p) => p.projectType === "StudentProject" || p.projectType === "ProfessionalProject");
   
     // If project is not found
     if (!project) {
@@ -24,9 +24,9 @@ function DetailedProjectPage({ projects }) {
             ))}
           </Slide>
         </div>
-        <p>
-          <strong>Introduction:</strong> {project.introduction}
-        </p>
+        <h3>
+          <strong><u>Introduction:</u></strong>
+        </h3>
         <p>
           <strong>Project Type:</strong> {project.projectType}
         </p>
@@ -45,9 +45,10 @@ function DetailedProjectPage({ projects }) {
         <p>
           <strong>Period:</strong> {project.period}
         </p>
-        <p>
-          <strong>About the Game:</strong> {project.aboutTheGame}
-        </p>
+        <h3>
+          <strong><u>About the Game:</u></strong> 
+          <p>{project.aboutTheGame}</p>
+        </h3>
       </div>
     );
   }

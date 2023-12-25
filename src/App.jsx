@@ -27,7 +27,6 @@ function App() {
         <Route path="/project" element={<ProjectsShow />} />
         <Route path="/project/ProfessionalProject" element={<ProfessionalProjectsPage />} />
         <Route path="/project/StudentProject" element={<StudentProjectsPage />} />
-        <Route path="/project/:projectId" element={<DetailedProjectPage projects={projects} />} />
         <Route path="/project/:title" element={<DetailedProjectPage projects={projects} />} />
         <Route path="*" element={<Navigate to="/"/>} />
       </Routes>

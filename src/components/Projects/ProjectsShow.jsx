@@ -4,9 +4,9 @@ import { imagesPerso, imagesPro, imagesStud } from  "../../projectsData.js";
 import "./ProjectsShow.css"
 import ProjectBox from './ProjectBox.jsx';
 
-const personalProjectImages = [imagesPerso.PCG_Overview, imagesPerso.PCG_CirtyGeneration, imagesPerso.PCG_CityRoad ];
-const professionalProjectImages = [imagesPerso.PCG_Overview, imagesPerso.PCG_CirtyGeneration, imagesPerso.PCG_CityRoad ];
-const studentProjectImages = [imagesStud.Accel_Overview, imagesPerso.PCG_CirtyGeneration, imagesPerso.PCG_CityRoad ];
+const personalProjectImages = [imagesPerso.PCG_Overview ];
+const professionalProjectImages = [imagesPro.GundamEvo_Overview, imagesPro.KSP2_Overview ];
+const studentProjectImages = [imagesStud.Accel_Overview ];
 
 function ProjectsShow() {
   const projectCategories = [

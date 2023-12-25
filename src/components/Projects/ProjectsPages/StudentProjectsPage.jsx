@@ -5,14 +5,16 @@ import ProjectBox from '../ProjectBox.jsx';
 
 function StudentProjectsPage() {
 
-  const project = projects.find((p) => p.projectType === 'StudentProject');
+  const studentProjects = projects.filter((p) => p.projectType === 'StudentProject');
   
     return (
-      <div className="component-project">
+      <div>
         <ProjectsShow />
-        <h2>Students Projects</h2>
-        <div style={{ display: 'flex' }}>
+        <h2>Student Projects</h2>
+        <div className="project-box-container">
+        {studentProjects.map((project) => (
           <ProjectBox category={project.title} title={project.title} images={project.images} />
+        ))}
         </div>
       </div>
     );

@@ -1,23 +1,22 @@
 import React from 'react';
+import { projects } from  "../../../projectsData.js";
 import ProjectsShow from '../ProjectsShow.jsx';
 import ProjectBox from '../ProjectBox.jsx';
+import './ProfessionalProjectsPage.css';
 
 function ProfessionalProjectsPage() {
 
-  const professionalProject = [
-  { id: 1, title: 'Gundam Evolution', description: 'lorem', images: [] },
-  { id: 2, title: 'KerbalSpaceProgram2', description: 'lorem', images: [] },
-];
-
+  const professionalProjects = projects.filter((p) => p.projectType === 'ProfessionalProject');
+  
   return (
-    <div className="component-project">
+    <div>
       <ProjectsShow />
       <h2>Professional Projects</h2>
-      <div style={{ display: 'flex' }}>
-        {professionalProject.map((project) => (
-          <ProjectBox key={project.id} title={project.title} images={project.images} />
+      <div className="project-box-container">
+        {professionalProjects.map((project) => (
+          <ProjectBox category={project.title} title={project.title} images={project.images} />
         ))}
-      </div>
+        </div>
     </div>
   );
 };
