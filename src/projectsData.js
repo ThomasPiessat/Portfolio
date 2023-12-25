@@ -58,13 +58,18 @@ export const projects = [
       id: 1,
       title: 'Accel',
       introduction: 'Lorem ipsum...',
-      projectType: 'Personal',
+      projectType: 'StudentProject',
       engine: 'Unity',
       language: 'C#',
       team: 'Solo',
       time: '3 months',
       period: '2022',
       aboutTheGame: 'Details about the game...',
+      images: [
+        imagesStud.Accel_Overview,
+        imagesStud.Accel_Gameplay1,
+        imagesStud.Accel_Gameplay2,
+      ]
     },
     // Add more projects as needed
   ];

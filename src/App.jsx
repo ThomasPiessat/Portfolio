@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About.jsx"
@@ -28,6 +28,7 @@ function App() {
         <Route path="/project/ProfessionalProject" element={<ProfessionalProjectsPage />} />
         <Route path="/project/StudentProject" element={<StudentProjectsPage />} />
         <Route path="/project/:projectId" element={<DetailedProjectPage projects={projects} />} />
+        <Route path="/project/:title" element={<DetailedProjectPage projects={projects} />} />
         <Route path="*" element={<Navigate to="/"/>} />
       </Routes>
       <Footer />
