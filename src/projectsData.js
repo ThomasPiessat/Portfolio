@@ -1,5 +1,5 @@
 // Import all images
-import PCG_Overview from './assets/img/PCG/CityAlongsideRoad.png'
+import PCG_Overview from './assets/img/PCG/Overview.png'
 import PCG_CirtyGeneration from './assets/img/PCG/CityGeneration.png'
 import PCG_CityRoad from './assets/img/PCG/CityAlongsideRoad.png'
 //sudent
@@ -103,4 +103,18 @@ export const projects = [
             imagesPro.KSP2_Overview
           ]
         },
+        {
+            id: 4,
+            title: 'Procedural City Generation',
+            projectType: 'PersonalProject',
+            engine: 'Unreal Engine 5',
+            language: 'C++/Blueprint',
+            team: '',
+            time: '',
+            period: '',
+            aboutTheGame: '',
+            images: [
+                imagesPerso.PCG_Overview
+              ]
+            },
   ];
