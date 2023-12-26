@@ -1,0 +1,13 @@
+:root {
+    --bg-color: #282c34;
+    --text-color : white;
+    --bg-btn-color: #0a6f8b;
+    --bg-btn-hover-color: #061424;
+  }
+
+body {
+    font-family: JosefinFont;
+    src: local(JosefinFont), url('./assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }

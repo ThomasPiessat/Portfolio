@@ -1,38 +1,74 @@
 .detailed-project {
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+}
+
+.sidebar {
+  width: 10%;
   padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.sidebar h2 {
+  color: #333;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  color: #0056b3;
+}
+
+.content {
+  max-width: 800px;
+  padding: 20px;
+  margin-left: 25%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: #fff;
 }
 
-.detailed-project h1 {
-  color: #333;
-  text-align: center;
-}
-
-.detailed-project p {
-  margin: 10px 0;
-  line-height: 1.5;
-}
-
-.detailed-project strong {
-  font-weight: bold;
-  margin-right: 5px;
-}
-
 .detailed-slide-container {
+  margin-top: 20px;
+}
+
+.detailed-each-slide-effect {
   width: 100%;
   height: 400px;
-  padding: 2%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 .detailed-each-slide-effect > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  height: 400px;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+.back-button {
+  margin-top: 20px;
+}
+
+.back-button a {
+  text-decoration: none;
+  background-color: var(--bg-btn-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}

@@ -44,10 +44,14 @@
   left: 50%; 
   transform: translate(-50%, -50%);
   padding: 10px 20px;
-  background-color: #0a6f8b;
+  background-color: var(--bg-btn-color);
   color: var(--text-color);
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
   font-size: 1em;
+}
+
+.view-details:hover {
+  background-color: var(--bg-btn-hover-color);
 }
