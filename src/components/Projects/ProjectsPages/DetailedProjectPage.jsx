@@ -62,6 +62,10 @@ function DetailedProjectPage({ projects }) {
           <p>
             <strong>Period:</strong> {project.period}
           </p>
+          <p>
+            <strong>Project Page:</strong> 
+            <a href={project.projectPage} target="_blank" rel="noopener noreferrer"> Project Page</a>
+          </p>
           <h3>
             <strong><u>About the Game:</u></strong> 
             <p>{project.aboutTheGame}</p>

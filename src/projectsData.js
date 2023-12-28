@@ -68,6 +68,7 @@ export const projects = [
         team: '3 programmers, 5 graphic designers, 1 game designer, 2 sound designers',
         time: '3 months',
         period: 'April - June 2018',
+        projectPage: 'https://store.steampowered.com/app/994260/Accel/',
         aboutTheGame: "ACCEL is an arcade runner and scorer game in a cyber world. You are going to control a spaceship through different levels and in order to win you will have to dodge obstacles by moving left and right but it's also possible to make 360 degrees maneuverability. My role in this project has been in the first place to prototype a spaceship with shooting mecanics and a barrel role. But with the time that was given to us we could not consider these options. So I was in charge to work on the UI menu, all of the options system (change the different volume), the HUD in game and the collectible system, I integrated some of the animations as well. This project brought me in my first production of a video game with all profession fields. Even if it's a students project, we worked with real studio's conditions. That is to say communicate with co-workers to reach the attempts of the team. ",
         images: [
           imagesStud.Accel_Overview,
@@ -84,6 +85,7 @@ export const projects = [
         team: '',
         time: '',
         period: '',
+        projectPage: 'https://store.steampowered.com/app/1816670/GUNDAM_EVOLUTION/',
         aboutTheGame: '',
         images: [
             imagesPro.GundamEvo_Overview
@@ -98,6 +100,7 @@ export const projects = [
         team: '',
         time: '',
         period: '',
+        projectPage: 'https://store.steampowered.com/app/954850/Kerbal_Space_Program_2/',
         aboutTheGame: '',
         images: [
             imagesPro.KSP2_Overview

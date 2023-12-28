@@ -28,22 +28,22 @@ function ProjectsShow() {
       description: "Projects that I did during my studies",
       images: studentProjectImages,
     },
-    {
-      category: "AllProjects",
-      title: "All Projects",
-      description: "See all projects",
-      images: personalProjectImages.concat(
-        professionalProjectImages,
-        studentProjectImages
-      ),
-    },
+    // {
+    //   category: "AllProjects",
+    //   title: "All Projects",
+    //   description: "See all projects",
+    //   images: personalProjectImages.concat(
+    //     professionalProjectImages,
+    //     studentProjectImages
+    //   ),
+    // },
   ];
 
   return (
     <Container fluid className="project-section">
       <div className="projectsBox-container">
         {projectCategories.map((categoryData) => (
-          <ProjectBox key={categoryData.category} {...categoryData} />
+          <ProjectBox key={categoryData.category} {...categoryData} detailsButtonText='View More Projects' />
         ))}
       </div>
     </Container>

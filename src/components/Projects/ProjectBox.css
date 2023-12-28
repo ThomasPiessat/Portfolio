@@ -14,7 +14,7 @@
 }
 
 .component-project-box:hover {
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  box-shadow: 0 0 10px var(--box-shadow-color);
   transform: scale(1.02); /* Increase size by 10% on hover */
 }
 

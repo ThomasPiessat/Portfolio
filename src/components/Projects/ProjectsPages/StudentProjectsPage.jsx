@@ -2,6 +2,7 @@ import React from 'react';
 import { projects } from  "../../../projectsData.js";
 import ProjectsShow from '../ProjectsShow.jsx';
 import ProjectBox from '../ProjectBox.jsx';
+import './ProjectsPage.css';
 
 function StudentProjectsPage() {
 

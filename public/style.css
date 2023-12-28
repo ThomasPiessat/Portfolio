@@ -1,8 +1,9 @@
 :root {
     --bg-color: #282c34;
-    --text-color : white;
+    --text-color: white;
     --bg-btn-color: #0a6f8b;
     --bg-btn-hover-color: #061424;
+    --box-shadow-color: rgba(255, 215, 0, 0.2);
   }
 
 body {

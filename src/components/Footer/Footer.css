@@ -1,11 +1,12 @@
 /* Style for the footer section */
 .footer {
-  background-color: #333;
-  color: #fff;
-  bottom: 0 !important;
+  bottom: 0;
+  width: 100%;  
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
   text-align: center;
+  background-color: #333;
+  color: #fff;
 }
 
 /* Style for the footer copywright columns */

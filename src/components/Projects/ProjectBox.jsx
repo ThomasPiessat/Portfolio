@@ -5,7 +5,7 @@ import 'react-slideshow-image/dist/styles.css';
 import Nav from "react-bootstrap/Nav";
 import './ProjectBox.css';
 
-function ProjectBox ({category, title, description, images})
+function ProjectBox ({category, title, description, images, detailsButtonText})
 {
   const buttonStyle = {
     width: "30px",
@@ -36,7 +36,7 @@ const properties = {
               to={`/project/${category}`}
               className="view-details"
           >
-            View Details
+            {detailsButtonText || 'View Details'}
           </Nav.Link>
       </div>
   );

@@ -10,6 +10,7 @@
 /* Style for the description within the home about section */
 .home-about-description {
   text-align: left;
+  padding-left: 5%;
 }
 
 /* Style for the heading within the description */
