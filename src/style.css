@@ -6,9 +6,13 @@
     --box-shadow-color: rgba(255, 215, 0, 0.2);
   }
 
-body {
-    font-family: JosefinFont;
-    src: local(JosefinFont), url('./assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('woff2');
+  @font-face {
+    font-family: 'JosefinFont';
+    src: local('JosefinFont'), url('./assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('woff2');
     font-weight: normal;
     font-style: normal;
+  }
+  
+  body {
+    font-family: 'JosefinFont', sans-serif;
   }
