@@ -1,23 +1,24 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import './Navbar.css'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function NavBar() {
   const [updateExpanded] = useState(false);
 
   return (
-    <div className="navbar">
-      <Navbar.Brand href="/" className="nav-button">
-        Thomas Piessat
-      </Navbar.Brand>
-        <Nav className="navbar" defaultActiveKey="#home">
-          <Nav.Link
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" sticky="top">
+    <Container>
+      <Navbar.Brand href="/">Thomas Piessat</Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="me-auto">
+        <Nav.Link
             as={Link}
             to="/about"
             onClick={() => updateExpanded(false)}
-            className="nav-button"
           >
             About
           </Nav.Link>
@@ -26,16 +27,19 @@ function NavBar() {
             as={Link}
             to="/project"
             onClick={() => updateExpanded(false)}
-            className="nav-button"
           >
             Projects
           </Nav.Link>
       
-          <a href="https://github.com/ThomasPiessat" target="_blank" rel="noopener noreferrer" className="nav-button">
+          <Nav.Link
+            as={Link}
+            to="https://github.com/ThomasPiessat" target="_blank" rel="noopener noreferrer">
             Github
-          </a>     
+          </Nav.Link>     
         </Nav>
-    </div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
