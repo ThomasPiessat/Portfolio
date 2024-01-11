@@ -15,11 +15,28 @@ import {
   Routes,
   Navigate
 } from "react-router-dom";
+import Lottie from 'react-lottie';
+import animationData from './pre.json';
 import './style.css';
 
 function App() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
   return (
     <Router>
+    <div>
+      <Lottie 
+	    options={defaultOptions}
+        height={400}
+        width={400}
+      />
+    </div>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
