@@ -1,26 +1,16 @@
-/* Style for the footer section */
-.footer {
-  position: fixed;
-  background-color: #333;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 8px;
-  text-align: center;
-}
-
 /* Style for the footer copywright columns */
 .footer-copywright {
+  text-align: center !important;
   margin-top: 10px;
 }
 
 /* Style for the footer copywright heading */
 .footer-copywright h3 {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 /* Style for the copyright year */
 .footer-copywright h3:last-child {
   margin-top: 10px;
-  font-size: 1em;
+  font-size: 0.9em;
 }

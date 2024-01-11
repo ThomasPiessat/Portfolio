@@ -11,16 +11,16 @@ function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" sticky="top">
     <Container>
-      <Navbar.Brand href="/">Thomas Piessat</Navbar.Brand>
+      <Navbar.Brand style={{paddingLeft: "25%"}} href="/"><h1>Thomas Piessat</h1></Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="me-auto">
+        <Nav className="mx-3" style={{width: "400px"}}>
         <Nav.Link
             as={Link}
             to="/about"
             onClick={() => updateExpanded(false)}
           >
-            About
+            <h2>About</h2>
           </Nav.Link>
 
           <Nav.Link
@@ -28,13 +28,13 @@ function NavBar() {
             to="/project"
             onClick={() => updateExpanded(false)}
           >
-            Projects
+            <h2>Projects</h2>
           </Nav.Link>
       
           <Nav.Link
             as={Link}
             to="https://github.com/ThomasPiessat" target="_blank" rel="noopener noreferrer">
-            Github
+            <h2>Github</h2>
           </Nav.Link>     
         </Nav>
         </Navbar.Collapse>
