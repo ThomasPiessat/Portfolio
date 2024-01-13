@@ -8,6 +8,7 @@
   text-align: center;
   position: relative;
   display: inline-block;
+  padding: 1%;
   width: 450px;
   height: 400px;
   transition: box-shadow 0.3s, transform 0.3s;

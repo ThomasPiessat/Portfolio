@@ -1,4 +1,8 @@
 // Import all images
+//Resume
+import CV from '../src/assets/img/resume/CV_image.png'
+import CV_PDF from '../src/assets/dl/FR_CV.pdf'
+//PCG
 import PCG_Overview from './assets/img/PCG/Overview.png'
 import PCG_CirtyGeneration from './assets/img/PCG/CityGeneration.png'
 import PCG_CityRoad from './assets/img/PCG/CityAlongsideRoad.png'
@@ -26,6 +30,11 @@ import Vue_Icon from '../src/assets/img/ICO/vue.png'
 import React_Icon from '../src/assets/img/ICO/react.png'
 
 // Export all images
+export const cv = { 
+    CV,
+    CV_PDF,
+ };
+
 export const imagesPerso = {
     PCG_Overview,
     PCG_CirtyGeneration,

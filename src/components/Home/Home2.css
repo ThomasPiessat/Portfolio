@@ -29,3 +29,28 @@
   font-weight: bold;
   color: #333;
 }
+
+.card {
+  padding: 10px 0px;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  perspective: 600px; /* Set perspective value for 3D effect */
+}
+
+.card-description {
+  transition: transform 0.5s; /* Set transition duration for smooth effect */
+  width: 400px;
+  height: 600px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add the hover effect for the 3D rotation */
+.card-description:hover {
+  transform: rotate3d(0, 1, 0, 10deg);
+  box-shadow: 0 0 20px rgba(255, 223, 0, 0.8);
+}

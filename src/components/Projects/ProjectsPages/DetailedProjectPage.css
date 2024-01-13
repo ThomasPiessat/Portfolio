@@ -1,12 +1,19 @@
 .detailed-project {
   display: flex;
-  align-items: stretch;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 2%;
 }
 
-.sidebar {
-  width: 10%;
-  padding: 20px;
-  background-color: #f0f0f0;
+@media screen and (max-width: 768px) {
+  .detailed-project {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 30%;
+    padding: 10px;
+  }
 }
 
 .sidebar h2 {
@@ -33,9 +40,10 @@
 }
 
 .content {
+  display: block;
+  position: relative;
   max-width: 800px;
   padding: 20px;
-  margin-left: 25%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: #fff;

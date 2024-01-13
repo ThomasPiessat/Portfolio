@@ -17,13 +17,13 @@
   margin-right: 2%;
   position: relative;
   display: inline-block;
-  overflow: hidden; /* Hide overflowing content */
+  overflow: hidden;
 }
 
 .tool-image {
   display: block;
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   transition: transform 0.3s ease;
 }
 
@@ -51,5 +51,5 @@
 }
 
 .tool-container:hover .tool-image {
-  transform: translateY(-20px); /* Adjust the translateY value as needed */
+  transform: scale(130%);
 }
