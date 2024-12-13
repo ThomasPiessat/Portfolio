@@ -14,6 +14,8 @@ const toolsData = [
   { icon: icons.Perforce_Icon, alt: 'perforce', text: 'P4V' },
   { icon: icons.Vue_Icon, alt: 'vue', text: 'Vue' },
   { icon: icons.React_Icon, alt: 'react', text: 'React' },
+  { icon: icons.Notion_Icon, alt: 'notion', text: 'Notion' },
+  { icon: icons.Jira_Icon, alt: 'jira', text: 'Jira' },
 ];
 
 function ToolsUsed() {

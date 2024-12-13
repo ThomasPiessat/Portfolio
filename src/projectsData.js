@@ -28,6 +28,8 @@ import Git_Icon from '../src/assets/img/ICO/github.png'
 import Perforce_Icon from '../src/assets/img/ICO/perforce (1).png'
 import Vue_Icon from '../src/assets/img/ICO/vue.png'
 import React_Icon from '../src/assets/img/ICO/react.png'
+import Notion_Icon from '../src/assets/img/ICO/notion.png'
+import Jira_Icon from '../src/assets/img/ICO/jira.png'
 
 // Export all images
 export const cv = { 
@@ -65,6 +67,8 @@ export const icons = {
     Perforce_Icon,
     Vue_Icon,
     React_Icon,
+    Notion_Icon,
+    Jira_Icon,
 }
 
 export const projects = [
