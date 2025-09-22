@@ -19,32 +19,30 @@ concurrency:
   cancel-in-progress: true
   
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: yarn
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
+          cache: npm
+      - name: Install
+        run: npm ci
       - name: Build
-        run: yarn build
-
-      # SPA fallback for BrowserRouter refreshes (harmless if using HashRouter)
+        run: npm run build
+      # Keeps BrowserRouter refreshes working; harmless if using HashRouter
       - name: Add 404 fallback
         run: cp build/index.html build/404.html
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: build
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

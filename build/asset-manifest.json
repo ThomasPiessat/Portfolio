@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.985ec57d.css",
+    "main.js": "/portfolio/static/js/main.002825dd.js",
+    "static/media/FR_CV.pdf": "/portfolio/static/media/FR_CV.eefdc6f248d776b3d4c6.pdf",
+    "static/media/CityAlongsideRoad.png": "/portfolio/static/media/CityAlongsideRoad.a8860265ad0b8e903e2d.png",
+    "static/media/Overview.png": "/portfolio/static/media/Overview.ccc590fdb218469a902c.png",
+    "static/media/accelGameplay2.jpg": "/portfolio/static/media/accelGameplay2.4a1224c19d173bb39480.jpg",
+    "static/media/CityGeneration.png": "/portfolio/static/media/CityGeneration.0a1e87c9c24e181f3d4d.png",
+    "static/media/GundamEvo_Overview.jpg": "/portfolio/static/media/GundamEvo_Overview.f3440344e476f3800251.jpg",
+    "static/media/accelGameplay.jpg": "/portfolio/static/media/accelGameplay.94e3b694d6d3714a580d.jpg",
+    "static/media/CV_image.png": "/portfolio/static/media/CV_image.0a202868bfc965d0d506.png",
+    "static/media/ksp2_Overview.jpg": "/portfolio/static/media/ksp2_Overview.32a2fb0ec838f62d9822.jpg",
+    "static/media/JosefinSans-VariableFont_wght.ttf": "/portfolio/static/media/JosefinSans-VariableFont_wght.613585db06f849ca7717.ttf",
+    "static/media/visual-code.png": "/portfolio/static/media/visual-code.5033f1155d3617827f78.png",
+    "static/media/accelSteam.jpg": "/portfolio/static/media/accelSteam.d65952ef1b8db8f203bf.jpg",
+    "static/media/c-sharp.png": "/portfolio/static/media/c-sharp.a7346c0fe3975834e6da.png",
+    "static/media/c.png": "/portfolio/static/media/c.83dfa097dfa94f707a41.png",
+    "static/media/cpp.png": "/portfolio/static/media/cpp.1240ce157b70fb399c6c.png",
+    "static/media/github.png": "/portfolio/static/media/github.648e666260ca9d409a49.png",
+    "static/media/visual-basic.png": "/portfolio/static/media/visual-basic.ada9f60dcb2f2da3112c.png",
+    "static/media/unreal-engine.png": "/portfolio/static/media/unreal-engine.738786e47773a91c5a23.png",
+    "static/media/unity.png": "/portfolio/static/media/unity.019f8df7ed8f6732ddc1.png",
+    "static/media/jira.png": "/portfolio/static/media/jira.bb78f993a98783fa8746.png",
+    "index.html": "/portfolio/index.html",
+    "main.985ec57d.css.map": "/portfolio/static/css/main.985ec57d.css.map",
+    "main.002825dd.js.map": "/portfolio/static/js/main.002825dd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.985ec57d.css",
+    "static/js/main.002825dd.js"
+  ]
+}
