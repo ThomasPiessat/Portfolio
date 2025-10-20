@@ -1,10 +1,12 @@
 import React, { useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { cv } from "../../projectsData"; // you were already importing this
+import { useTranslation } from "react-i18next";
 import resumePdf from "../../assets/dl/FR_CV.pdf"; // prefer importing the file
 import "./Home2.css";
 
 function Home2() {
+  const { t, i18n } = useTranslation();
   const handleDownload = useCallback(() => {
     const link = document.createElement("a");
     link.href = resumePdf;
@@ -13,27 +15,28 @@ function Home2() {
     link.click();
     link.remove();
   }, []);
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <Container fluid className="home-about-section" id="about">
       <Row className="home-about-grid">
         {/* Left column: intro */}
         <Col lg={7} className="home-about-description">
-          <h1>
-            LET ME <span className="purple"> INTRODUCE </span> MYSELF
-          </h1>
-          <p>
-            I’m a software engineer with experience in C#/C++, Unity, Unreal Engine, and tools.
-          </p>
-          <p>
-            I’m sort of a generalist, and at the moment my main areas of interest are tools and plugins in Unreal Engine 5.
-          </p>
+          <div className="lang-switch">
+            <button onClick={() => changeLanguage("en")}>🇬🇧 EN</button>
+            <button onClick={() => changeLanguage("fr")}>🇫🇷 FR</button>
+          </div>
+          <h1>{t("introTitle")}</h1>
+          <p>{t("introText1")}</p>
+          <p>{t("introText2")}</p>
         </Col>
 
         {/* Right column: resume card */}
         <Col lg={5} className="resume-col">
           <div className="resume-card">
-            <h2>Résumé</h2>
+            <h2>{t("resume")}</h2>
             <div className="resume-card-body">
               {/* Use the preview image from your data if you like */}
               <img
@@ -43,11 +46,11 @@ function Home2() {
               />
               <div className="resume-actions">
                 <button className="btn-primary" onClick={handleDownload}>
-                  Download PDF
+                  {t("download")}
                 </button>
                 {/* Optional open-in-new-tab */}
                 <a className="btn-secondary" href={resumePdf} target="_blank" rel="noreferrer">
-                  Open in new tab
+                  {t("open")}
                 </a>
               </div>
             </div>

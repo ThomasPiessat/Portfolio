@@ -21,6 +21,12 @@
   line-height: 1.15;
 }
 
+.lang-switch {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
 .purple { color: #9b5cf6; }
 
 /* Right column wrapper so the card centers nicely */
