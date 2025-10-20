@@ -1,56 +1,138 @@
-/* Style for the home about section */
+/* Section spacing + background */
 .home-about-section {
   background-color: #fff;
   padding: 50px 0;
   text-align: center;
 }
 
-/* Style for the description within the home about section */
+/* Center the grid and constrain max width */
+.home-about-grid {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* Left text column */
 .home-about-description {
-  text-align: left;
-  padding-left: 5%;
+  padding-right: clamp(8px, 2vw, 24px);
 }
 
-/* Style for the heading within the description */
 .home-about-description h1 {
-  font-size: 2.6em;
-  color: #333; 
+  margin-bottom: 12px;
+  line-height: 1.15;
 }
 
-/* Style for the main content within the description */
-.home-about-description p {
-  font-size: 1.2em;
-  color: #333;
-  margin-top: 20px;
-}
+.purple { color: #9b5cf6; }
 
-/* Style for strong tag within the description */
-.home-about-description strong {
-  font-weight: bold;
-  color: #333;
-}
-
-.card {
-  padding: 10px 0px;
-  height: 60vh;
+/* Right column wrapper so the card centers nicely */
+.resume-col {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  perspective: 600px; /* Set perspective value for 3D effect */
+  align-items: flex-start;
 }
 
-.card-description {
-  transition: transform 0.5s; /* Set transition duration for smooth effect */
-  width: 400px;
-  height: 600px;
-  padding: 10px;
+/* Card */
+.resume-card {
+  width: min(100%, 420px);
+  background: #e0e0e0;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 16px;
+}
+
+.resume-card h2 {
+  font-size: clamp(18px, 2.2vw, 22px);
+  margin: 0 0 12px;
+}
+
+/* Card body with the preview image */
+.resume-card-body {
+  display: grid;
+  gap: 12px;
+}
+
+.resume-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 210 / 297;       /* A4 proportion; keeps layout stable */
+  object-fit: cover;              /* or 'contain' if you prefer no crop */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
-/* Add the hover effect for the 3D rotation */
-.card-description:hover {
-  transform: rotate3d(0, 1, 0, 10deg);
-  box-shadow: 0 0 20px rgba(255, 223, 0, 0.8);
+/* Buttons */
+.resume-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.btn-primary {
+  background: #0a6f8b;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(10, 111, 139, 0.35);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #000000;
+  border: 1px solid rgba(201, 209, 217, 0.28);
+}
+
+.btn-secondary:hover {
+  background: rgba(201, 209, 217, 0.08);
+}
+
+/* --------- RESPONSIVE BREAKPOINTS --------- */
+
+/* Below large screens: give more room to text, keep card centered */
+@media (max-width: 1200px) {
+  .home-about-grid {
+    padding-inline: 8px;
+  }
+}
+
+/* Tablet and down: stack columns, center everything */
+@media (max-width: 991.98px) { /* Bootstrap lg breakpoint */
+  .home-about-description {
+    padding-right: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .resume-col {
+    justify-content: center;
+  }
+
+  .resume-card {
+    width: min(100%, 460px);
+  }
+}
+
+/* Small phones: tighten spacing a bit */
+@media (max-width: 575.98px) {
+  .home-about-section {
+    padding: 20px 12px;
+  }
+
+  .resume-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
 }

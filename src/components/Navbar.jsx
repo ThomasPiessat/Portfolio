@@ -36,7 +36,14 @@ function NavBar() {
             as={Link}
             to="https://github.com/ThomasPiessat" target="_blank" rel="noopener noreferrer">
             <h2>Github</h2>
+          </Nav.Link> 
+          {/*
+          <Nav.Link
+            as={Link}
+            to="https://thomaspiessat.github.io" target="_blank" rel="noopener noreferrer">
+            <h2>Notes</h2>
           </Nav.Link>     
+          */}
         </Nav>
         </Navbar.Collapse>
       </Container>

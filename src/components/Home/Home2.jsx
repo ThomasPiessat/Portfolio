@@ -1,49 +1,59 @@
-import React from "react";
-import { Container, Col } from "react-bootstrap";
-import { cv } from '../../../src/projectsData';
-import "./Home2.css"
-
+import React, { useCallback } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { cv } from "../../projectsData"; // you were already importing this
+import resumePdf from "../../assets/dl/FR_CV.pdf"; // prefer importing the file
+import "./Home2.css";
 
 function Home2() {
-  const handleDownload = () => {
-    const pdfPath = '../src/assets/dl/FR_CV.pdf';
-    
-    // Create an anchor element
-    const link = document.createElement('a');
-    
-    // Set the href attribute to the PDF path
-    link.href = pdfPath;
-    
-    // Specify that the link is to be downloaded
-    link.setAttribute('download', '../src/assets/dl/FR_CV.pdf');
-    
-    // Append the link to the document
+  const handleDownload = useCallback(() => {
+    const link = document.createElement("a");
+    link.href = resumePdf;
+    link.download = "Thomas_Piessat_CV.pdf";
     document.body.appendChild(link);
-    
-    // Trigger a click on the link to start the download
     link.click();
-    
-    // Remove the link from the document
-    document.body.removeChild(link);
-  };
+    link.remove();
+  }, []);
+
   return (
     <Container fluid className="home-about-section" id="about">
-      <Col md={8} className="home-about-description">
-        <h1>LET ME INTRODUCE MYSELF</h1>
-        <p>
-          I’m a software engineer with experience in C#/C++, Unity, Unreal Engine, and tools.
-        </p>
-        <p>
-          I’m sort of a generalist, and at the moment my main areas of interest are tools and plugins in Unreal Engine 5.
-        </p>
-      </Col>  
-      <div className="card">
-        <h1>Resume</h1>
-        <div className="card-description">
-          <img src={cv.CV} alt='resume' width="350" height="550"/>
-          <button onClick={handleDownload}>Download PDF</button>
-        </div>
-      </div>
+      <Row className="home-about-grid">
+        {/* Left column: intro */}
+        <Col lg={7} className="home-about-description">
+          <h1>
+            LET ME <span className="purple"> INTRODUCE </span> MYSELF
+          </h1>
+          <p>
+            I’m a software engineer with experience in C#/C++, Unity, Unreal Engine, and tools.
+          </p>
+          <p>
+            I’m sort of a generalist, and at the moment my main areas of interest are tools and plugins in Unreal Engine 5.
+          </p>
+        </Col>
+
+        {/* Right column: resume card */}
+        <Col lg={5} className="resume-col">
+          <div className="resume-card">
+            <h2>Résumé</h2>
+            <div className="resume-card-body">
+              {/* Use the preview image from your data if you like */}
+              <img
+                src={cv.CV}             /* or a dedicated preview image */
+                alt="Thomas Piessat — Resume"
+                className="resume-img"
+              />
+              <div className="resume-actions">
+                <button className="btn-primary" onClick={handleDownload}>
+                  Download PDF
+                </button>
+                {/* Optional open-in-new-tab */}
+                <a className="btn-secondary" href={resumePdf} target="_blank" rel="noreferrer">
+                  Open in new tab
+                </a>
+              </div>
+            </div>
+          </div>
+        </Col>
+      </Row>
     </Container>
   );
 }

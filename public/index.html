@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Basic -->
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Primary SEO -->
+    <title>Thomas Piessat — Software Engineer (C++/C#, UE5, Unity)</title>
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Portfolio of Thomas Piessat: tools & plugins, Unreal Engine 5, Unity, gameplay, and professional projects."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <link rel="canonical" href="https://thomaspiessat.fr/" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Thomas Piessat" />
+    <meta property="og:title" content="Thomas Piessat — Software Engineer" />
+    <meta
+      property="og:description"
+      content="UE5/Unity tools & plugins, personal, professional, and student projects."
+    />
+    <!-- Ensure this image exists in /public -->
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:url" content="https://thomaspiessat.fr/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Optional: set these if you have a handle -->
+    <!-- <meta name="twitter:site" content="@yourhandle" />
+    <meta name="twitter:creator" content="@yourhandle" /> -->
+
+    <!-- Global styles + font preload -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/style.css" />
+    <!-- Update the path/extension to match your actual font file -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="%PUBLIC_URL%/assets/fonts/Josefin_Sans/josefin.woff2"
+      crossorigin
+    />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Thomas Piessat",
+        "url": "https://thomaspiessat.fr/",
+        "jobTitle": "Software Engineer",
+        "knowsAbout": ["C++", "C#", "Unreal Engine 5", "Unity", "Tools & Plugins"],
+        "sameAs": ["https://github.com/ThomasPiessat"]
+      }
+    </script>
+
+    <!-- Optional analytics (example: Plausible). Remove if not used.
+    <script defer data-domain="thomaspiessat.fr" src="https://plausible.io/js/script.js"></script>
     -->
-    <title>ThomasPiessat_Portfolio</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
+

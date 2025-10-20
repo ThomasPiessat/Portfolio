@@ -13,6 +13,7 @@
     font-style: normal;
   }
   
-  body {
-    font-family: 'JosefinFont', sans-serif;
-  }
+  html, body {
+  font-family: 'Josefin', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  margin: 0;
+}
