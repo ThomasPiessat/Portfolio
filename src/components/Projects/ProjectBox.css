@@ -11,16 +11,13 @@
   padding: 1%;
   width: 450px;
   height: 400px;
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
 .component-project-box:hover {
-  box-shadow: 0 0 10px var(--box-shadow-color);
-  transform: scale(1.02); /* Increase size by 10% on hover */
-}
-
-.component-project-box:hover .image-container img.active {
-  opacity: 1;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--brand) 30%, var(--border));
 }
 
 .each-slide-effect > div {

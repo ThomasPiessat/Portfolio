@@ -1,14 +1,11 @@
 .tools-container {
-  background-color: var(--surface-1);
+  background: var(--surface-1);
   color: var(--text-color);
-  border-radius: 12px;
-  margin: 5% auto;
-  width: min(100%, 1100px);
-  padding: 18px 14px;
-  text-align: center;
-  position: relative;
-  box-shadow: var(--shadow);
   border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  padding: 18px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
 /* grid-ish flow */

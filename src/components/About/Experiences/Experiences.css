@@ -1,5 +1,84 @@
-.experience-container-box{
+.experience-container-box {
+  display: grid;
+  gap: 16px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.experience-container-box.compact {
+  margin: 24px auto 8px;
+}
+
+.experience-card {
+  background: var(--surface-1);
+  color: var(--text-color);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  padding: 18px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--brand) 30%, var(--border));
+}
+
+.experience-card.compact { 
+  padding: 14px; 
+}
+
+.exp-section {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  letter-spacing: .2px;
+  color: var(--brand);
+  opacity: .95;
+}
+
+.exp-header { 
+  margin-bottom: 6px; 
+}
+
+.exp-title {
+  margin: 0;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 600;
+}
+
+.exp-meta {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: .95rem;
+  color: var(--muted-color);
+}
+
+.exp-dot { 
+  opacity: .5; 
+  
+}
+
+.exp-bullets {
+  margin: 10px 0 0;
+  padding-left: 1rem; 
+  list-style-position: inside;
+  line-height: 1.45;
+}
+
+.exp-bullets li {
+  margin: 2px 0;
+  padding-left: 0;
+  text-indent: 0; 
+}
+
+.exp-bullets li::marker {
+  color: var(--brand);
+}
+
+.experience-card.compact .exp-bullets { 
+  display: none; 
 }

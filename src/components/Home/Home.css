@@ -50,8 +50,48 @@
 
 /* Company info line */
 .home-company {
-  font-size: clamp(1rem, 1.6vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.8);
+  margin-top: 8px;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+/* Stylish animated link */
+.company-link {
+  color: var(--brand);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.company-name {
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.company-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--brand);
+  transition: width 0.3s ease;
+}
+
+.company-link:hover {
+  color: var(--btn-bg-hover);
+}
+
+.company-link:hover::after {
+  width: 100%;
+}
+
+/* Optional: make it accessible for keyboard users */
+.company-link:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 .home-company strong {

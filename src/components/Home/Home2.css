@@ -22,7 +22,9 @@
   line-height: 1.15;
 }
 
-.purple { color: var(--brand, #9b5cf6); }
+.purple { 
+  color: var(--brand, #9b5cf6); 
+}
 
 /* Right column wrapper so the card centers nicely */
 .resume-col {

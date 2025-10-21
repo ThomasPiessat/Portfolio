@@ -1,23 +1,35 @@
 import React from 'react';
-import './Experience.css'
+import { useTranslation } from 'react-i18next';
+import './Experiences.css';
 
-function Experience({ title, xpTitle, date, location }) {
-    return (
-        <div class="experience-container">
-        <h2>{title}</h2>
-        <div class="experience-title">
-          <h3>{xpTitle}</h3>
-        <div class="date">
-          <h4>{date}</h4>
+function Experience({ titleKey, xpTitleKey, date, locationKey, bulletsKey, compact = false }) {
+  const { t } = useTranslation();
+
+  // If bulletsKey is provided, get array safely:
+  const bullets = bulletsKey ? t(bulletsKey, { returnObjects: true }) : [];
+
+  return (
+    <article className={`experience-card ${compact ? 'compact' : ''}`}>
+      <h2 className="exp-section">{t(titleKey)}</h2>
+
+      <div className="exp-header">
+        <h3 className="exp-title">{t(xpTitleKey)}</h3>
+        <div className="exp-meta">
+          <span className="exp-date">{date}</span>
+          <span className="exp-dot">•</span>
+          <span className="exp-location">{t(locationKey)}</span>
         </div>
-        <div class="description">
-          <h4>
-            {location}           
-          </h4>
-        </div>
-        </div> 
-        </div>
-    );
-  }
-    
+      </div>
+
+      {!compact && bullets && Array.isArray(bullets) && bullets.length > 0 && (
+        <ul className="exp-bullets">
+          {bullets.map((line, idx) => (
+            <li key={idx}>{line}</li>
+          ))}
+        </ul>
+      )}
+    </article>
+  );
+}
+
 export default Experience;

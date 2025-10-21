@@ -5,5 +5,25 @@
   "introText2": "Je suis plutôt généraliste et mes principaux centres d’intérêt sont les outils et plugins pour Unreal Engine 5.",
   "resume": "CV",
   "download": "Télécharger le PDF",
-  "open": "Ouvrir dans un nouvel onglet"
+  "open": "Ouvrir dans un nouvel onglet",
+  "exp": {
+    "professional": {
+      "title": "Expérience professionnelle",
+      "xpTitle": "Ingénieur logiciel — Black Shamrock (Virtuos)",
+      "location": "Dublin, Irlande",
+      "bullets": [
+        "Portage de Gundam Evolution sur PS5/XSX avec UE4 & C++.",
+        "Optimisation des performances pour les consoles nouvelle génération.",
+        "Création et intégration de systèmes d’UI sous Unity/C#.",
+        "Travail sur la génération procédurale pour Marvel 1943 sous UE5/C++.",
+        "Intégration d’IMGUI et d’outils propriétaires pour les données de performance.",
+        "Débogage et optimisation des systèmes de jeu et de rendu."
+      ]
+    },
+    "education": {
+      "title": "Éducation",
+      "xpTitle": "Objectif 3D — Programmeur Gameplay",
+      "location": "Montpellier, France"
+    }
+  }
 }
