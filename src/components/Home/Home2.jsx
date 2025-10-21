@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { cv } from "../../projectsData";
-import resumePdf from "../../assets/dl/FR_CV.pdf";
+import resumePdf from "../../assets/dl/CV_SoftwareEngineer_en_Final.pdf";
 import "./Home2.css";
 
 function Home2() {

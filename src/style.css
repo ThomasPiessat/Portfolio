@@ -1,19 +1,51 @@
+/* Base colors (light by default) */
 :root {
-    --bg-color: #282c34;
-    --text-color: white;
-    --bg-btn-color: #0a6f8b;
-    --bg-btn-hover-color: #061424;
-    --box-shadow-color: rgba(255, 215, 0, 0.2);
-  }
+  --bg-color: #f6f7fb;
+  --text-color: #0b0b0b;
+  --muted-color: #5c5f66;
 
-  @font-face {
-    font-family: 'JosefinFont';
-    src: local('JosefinFont'), url('./assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  --surface-1: #ffffff;
+  --surface-2: #f0f1f5;
+
+  --brand: #9b5cf6;
+  --btn-bg: #0a6f8b;
+  --btn-bg-hover: #084e64;
+
+  --border: rgba(0, 0, 0, 0.08);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark theme overrides */
+:root[data-theme="dark"] {
+  --bg-color: #121317;
+  --text-color: #f5f7ff;
+  --muted-color: #c9cbd1;
+
+  --surface-1: #17181d;
+  --surface-2: #1e2026;
+
+  --brand: #9b5cf6;
+  --btn-bg: #0a6f8b;
+  --btn-bg-hover: #073a48;
+
+  --border: rgba(255,255,255,0.08);
+  --shadow: 0 12px 32px rgba(0,0,0,0.35);
+}
+
+/* Respect system preference on first load (before JS) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
   }
-  
-  html, body {
-  font-family: 'Josefin', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  margin: 0;
+}
+
+/* App-wide usage */
+html, body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Nice transition when toggling */
+* {
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
 }

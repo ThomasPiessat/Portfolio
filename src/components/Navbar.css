@@ -63,28 +63,27 @@
   box-shadow: 0 0 0 2px rgba(155, 92, 246, 0.25) inset;
 }
 
-
-/* Intro hero under the navbar */
-.intro-hero {
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0));
-  padding: clamp(24px, 4vw, 56px) 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 12px;
 }
 
-.intro-container {
-  max-width: 1100px;
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-color);
+  border-radius: 999px;
+  padding: 6px 10px;
+  cursor: pointer;
+  line-height: 1;
+  transition: background-color .2s ease, transform .2s ease, border-color .2s ease;
 }
 
-.intro-title {
-  color: var(--text-color, #fff);
-  margin-bottom: 12px;
-  line-height: 1.15;
-}
-
-.intro-p {
-  color: rgba(255,255,255,0.88);
-  margin: 0 0 8px;
-  max-width: 68ch;
+.theme-toggle:hover {
+  background-color: rgba(255,255,255,0.08);
+  transform: translateY(-1px);
 }
 
 /* Mobile tweaks */

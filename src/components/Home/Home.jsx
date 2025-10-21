@@ -11,7 +11,7 @@ function Home() {
           <h1 className="home-title">Thomas Piessat</h1>
           <h2 className="home-subtitle">Software Engineer</h2>
           <p className="home-company">
-            Working for <strong>Black Shamrock</strong> <i>- a Virtuos Studio</i>
+            Working for <strong>LVCIM</strong>
           </p>
         </Container>
       </Container>

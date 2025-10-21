@@ -1,7 +1,8 @@
-/* Section spacing + background */
+/* Section spacing + background (theme-aware) */
 .home-about-section {
-  background-color: #fff;
-  padding: 50px 0;
+  background-color: var(--surface-1);
+  color: var(--text-color);
+  padding: clamp(28px, 4vw, 56px) 0;
   text-align: center;
 }
 
@@ -17,17 +18,11 @@
 }
 
 .home-about-description h1 {
-  margin-bottom: 12px;
+  margin: 0 0 12px;       /* kill top margin to avoid gaps */
   line-height: 1.15;
 }
 
-.lang-switch {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-
-.purple { color: #9b5cf6; }
+.purple { color: var(--brand, #9b5cf6); }
 
 /* Right column wrapper so the card centers nicely */
 .resume-col {
@@ -39,16 +34,17 @@
 /* Card */
 .resume-card {
   width: min(100%, 420px);
-  background: #e0e0e0;
+  background: var(--surface-2);
   border-radius: 16px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
   padding: 16px;
 }
 
 .resume-card h2 {
   font-size: clamp(18px, 2.2vw, 22px);
   margin: 0 0 12px;
+  color: var(--text-color);
 }
 
 /* Card body with the preview image */
@@ -60,11 +56,11 @@
 .resume-img {
   width: 100%;
   height: auto;
-  aspect-ratio: 210 / 297;       /* A4 proportion; keeps layout stable */
-  object-fit: cover;              /* or 'contain' if you prefer no crop */
+  aspect-ratio: 210 / 297;   /* A4 proportion; keeps layout stable */
+  object-fit: cover;          /* or 'contain' if you prefer no crop */
   border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
 }
 
 /* Buttons */
@@ -74,6 +70,7 @@
   flex-wrap: wrap;
 }
 
+/* shared button base */
 .btn-primary,
 .btn-secondary {
   appearance: none;
@@ -82,27 +79,37 @@
   padding: 10px 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
 }
 
+/* primary = filled */
 .btn-primary {
-  background: #0a6f8b;
-  color: #ffffff;
+  background: var(--btn-bg, #0a6f8b);
+  color: #fff;
 }
-
 .btn-primary:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 18px rgba(10, 111, 139, 0.35);
+  background: var(--btn-bg-hover, #084e64);
 }
 
+/* secondary = outline, theme aware text */
 .btn-secondary {
   background: transparent;
-  color: #000000;
-  border: 1px solid rgba(201, 209, 217, 0.28);
+  color: var(--text-color);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover {
+  background: color-mix(in srgb, var(--text-color) 10%, transparent);
 }
 
-.btn-secondary:hover {
-  background: rgba(201, 209, 217, 0.08);
+/* Reduce motion if user prefers */
+@media (prefers-reduced-motion: reduce) {
+  .resume-img,
+  .btn-primary,
+  .btn-secondary {
+    transition: none !important;
+  }
 }
 
 /* --------- RESPONSIVE BREAKPOINTS --------- */

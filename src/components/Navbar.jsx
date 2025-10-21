@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "../theme/ThemeProvider";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
 
 function NavBar() {
   const [updateExpanded] = useState(false);
   const { i18n, t } = useTranslation(); // t used for link labels if you localize them
-
   const currentLang = i18n.resolvedLanguage || i18n.language;
+  const { theme, toggleTheme } = useTheme();
 
   return (
       <Navbar collapseOnSelect expand="lg" className="custom-navbar" sticky="top">
@@ -40,20 +41,31 @@ function NavBar() {
 
             {/* Language switch on the far right */}
 
-          <div className="language-switch" role="group" aria-label="Language">
+          <div className="right-controls">
+            <div className="language-switch" role="group" aria-label="Language">
+              <button
+                onClick={() => i18n.changeLanguage("en")}
+                className={`lang-btn ${currentLang === "en" ? "active" : ""}`}
+                aria-pressed={currentLang === "en"}
+              >
+                us EN
+              </button>
+              <button
+                onClick={() => i18n.changeLanguage("fr")}
+                className={`lang-btn ${currentLang === "fr" ? "active" : ""}`}
+                aria-pressed={currentLang === "fr"}
+              >
+                🇫🇷 FR
+              </button>
+            </div>
             <button
-              onClick={() => i18n.changeLanguage("en")}
-              className={`lang-btn ${currentLang === "en" ? "active" : ""}`}
-              aria-pressed={currentLang === "en"}
+              type="button"
+              className="theme-toggle"
+              onClick={toggleTheme}
+              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+              title={theme === "dark" ? "Light mode" : "Dark mode"}
             >
-              🇬🇧 EN
-            </button>
-            <button
-              onClick={() => i18n.changeLanguage("fr")}
-              className={`lang-btn ${currentLang === "fr" ? "active" : ""}`}
-              aria-pressed={currentLang === "fr"}
-            >
-              🇫🇷 FR
+              {theme === "dark" ? "☀️" : "🌙"}
             </button>
           </div>
           </Navbar.Collapse>

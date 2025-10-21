@@ -1,23 +1,23 @@
 .tools-container {
-  background-color: var(--bg-color);
+  background-color: var(--surface-1);
   color: var(--text-color);
-  border-radius: 8px;
-  margin: auto;
-  width: 70%;
-  padding: 10px;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  border-radius: 12px;
+  margin: 5% auto;
+  width: min(100%, 1100px);
+  padding: 18px 14px;
   text-align: center;
   position: relative;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
 }
 
+/* grid-ish flow */
 .tool-container {
-  margin-top: 2%;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin: 14px 10px 0;
   position: relative;
   display: inline-block;
   overflow: hidden;
+  vertical-align: middle;
 }
 
 .tool-image {
@@ -25,12 +25,23 @@
   width: 65px;
   height: 65px;
   transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+/* Tooltip theming */
+:root {
+  --tooltip-bg: rgba(0, 0, 0, 0.85);
+  --tooltip-text: #fff;
+}
+:root[data-theme="dark"] {
+  --tooltip-bg: rgba(255, 255, 255, 0.1);
+  --tooltip-text: #fff;
 }
 
 .tool-text {
   visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: var(--text-color);
+  background-color: var(--tooltip-bg);
+  color: var(--tooltip-text);
   font-size: medium;
   text-align: center;
   border-radius: 4px;
@@ -41,15 +52,29 @@
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity .25s ease, transform .25s ease, bottom .25s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
+/* Hover effects */
 .tool-container:hover .tool-text {
   visibility: visible;
   opacity: 1;
-  bottom: 0;
+  bottom: -8px;
+  transform: translateX(-50%) translateY(0);
 }
 
 .tool-container:hover .tool-image {
-  transform: scale(130%);
+  transform: scale(1.18);
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25));
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .tool-image,
+  .tool-text {
+    transition: none !important;
+  }
 }
