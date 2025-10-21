@@ -1,12 +1,14 @@
 import React, { useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { cv } from "../../projectsData"; // you were already importing this
 import { useTranslation } from "react-i18next";
-import resumePdf from "../../assets/dl/FR_CV.pdf"; // prefer importing the file
+import { cv } from "../../projectsData";
+import resumePdf from "../../assets/dl/FR_CV.pdf";
 import "./Home2.css";
 
 function Home2() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+
+  // Optional: keep a JS fallback download for older browsers
   const handleDownload = useCallback(() => {
     const link = document.createElement("a");
     link.href = resumePdf;
@@ -15,46 +17,38 @@ function Home2() {
     link.click();
     link.remove();
   }, []);
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
 
   return (
-    <Container fluid className="home-about-section" id="about">
+    <Container fluid className="home-about-section" id="about" aria-labelledby="intro-heading">
       <Row className="home-about-grid">
         {/* Left column: intro */}
         <Col lg={7} className="home-about-description">
-          <div className="lang-switch">
-            <button onClick={() => changeLanguage("en")}>🇬🇧 EN</button>
-            <button onClick={() => changeLanguage("fr")}>🇫🇷 FR</button>
-          </div>
-          <h1>{t("introTitle")}</h1>
+          <h1 id="intro-heading">{t("introTitle")}</h1>
           <p>{t("introText1")}</p>
           <p>{t("introText2")}</p>
         </Col>
 
         {/* Right column: resume card */}
         <Col lg={5} className="resume-col">
-          <div className="resume-card">
-            <h2>{t("resume")}</h2>
+          <section className="resume-card" aria-labelledby="resume-title">
+            <h2 id="resume-title">{t("resume")}</h2>
             <div className="resume-card-body">
-              {/* Use the preview image from your data if you like */}
               <img
-                src={cv.CV}             /* or a dedicated preview image */
-                alt="Thomas Piessat — Resume"
+                src={cv?.CV || "/assets/img/resume-preview.jpg"}
+                alt={t("resumeAlt", { defaultValue: "Resume preview" })}
                 className="resume-img"
+                loading="lazy"
               />
               <div className="resume-actions">
                 <button className="btn-primary" onClick={handleDownload}>
                   {t("download")}
                 </button>
-                {/* Optional open-in-new-tab */}
                 <a className="btn-secondary" href={resumePdf} target="_blank" rel="noreferrer">
                   {t("open")}
                 </a>
               </div>
             </div>
-          </div>
+          </section>
         </Col>
       </Row>
     </Container>

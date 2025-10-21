@@ -7,12 +7,14 @@ function Footer() {
   let date = new Date();
   let year = date.getFullYear();
   return (
-    <Navbar expand="lg" className="bg-body-tertiary" fixed="bottom">
-      <Container fluid>
-        <Col className="footer-copywright">
-          <h3>Designed and Developed by Thomas Piessat</h3>
-          <h3>Copyright © {year}</h3>
-        </Col>
+    <Navbar expand="lg" className="footer" fixed="bottom">
+      <Container fluid className="footer-container">
+          <Col md={12} className="footer-content">
+            <p className="footer-text">
+              Designed &amp; Developed by <span className="footer-highlight">Thomas Piessat</span>
+            </p>
+            <p className="footer-text">© {year} All Rights Reserved</p>
+          </Col>
       </Container>
     </Navbar>
   );

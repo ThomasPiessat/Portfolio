@@ -1,4 +1,98 @@
-.bg-body-tertiary {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    border: 1px solid #ddd;
+/* Navbar look using your CSS variables */
+.custom-navbar {
+  background-color: var(--bg-color, #141414);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand-text h1 {
+  margin: 0;
+  font-size: clamp(20px, 2.2vw, 28px);
+  color: var(--text-color, #fff);
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.navbar-brand-text:hover h1 {
+  color: #9b5cf6;
+}
+
+.nav-links .nav-link {
+  color: var(--text-color, #fff) !important;
+  opacity: 0.9;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  padding: 0.5rem 0.75rem;
+}
+
+.nav-links .nav-link:hover {
+  color: #9b5cf6 !important;
+  opacity: 1;
+}
+
+.language-switch {
+  display: flex;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--text-color, #fff);
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-1px);
+}
+
+/* Active language feedback */
+.lang-btn.active {
+  background: rgba(155, 92, 246, 0.18);
+  border-color: #9b5cf6;
+  box-shadow: 0 0 0 2px rgba(155, 92, 246, 0.25) inset;
+}
+
+
+/* Intro hero under the navbar */
+.intro-hero {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0));
+  padding: clamp(24px, 4vw, 56px) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.intro-container {
+  max-width: 1100px;
+}
+
+.intro-title {
+  color: var(--text-color, #fff);
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+
+.intro-p {
+  color: rgba(255,255,255,0.88);
+  margin: 0 0 8px;
+  max-width: 68ch;
+}
+
+/* Mobile tweaks */
+@media (max-width: 991.98px) {
+  .language-switch {
+    margin-top: 12px;
+  }
+  .intro-container {
+    padding: 0 12px;
+  }
 }

@@ -1,16 +1,38 @@
-/* Style for the footer copywright columns */
-.footer-copywright {
-  text-align: center !important;
-  margin-top: 10px;
+.footer {
+  background-color: var(--bg-color, #141414);
+  color: var(--text-color, #fff);
+  text-align: center;
 }
 
-/* Style for the footer copywright heading */
-.footer-copywright h3 {
-  font-size: 1em;
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Style for the copyright year */
-.footer-copywright h3:last-child {
-  margin-top: 10px;
-  font-size: 0.9em;
+.footer-content {
+  text-align: center;
+}
+
+.footer-text {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.footer-highlight {
+  color: #9b5cf6;
+  font-weight: 600;
+}
+
+.footer-text:hover .footer-highlight {
+  text-shadow: 0 0 6px rgba(155, 92, 246, 0.6);
+}
+
+/* Make sure it stays clean on smaller screens */
+@media (max-width: 768px) {
+  .footer-text {
+    font-size: 0.85rem;
+  }
 }

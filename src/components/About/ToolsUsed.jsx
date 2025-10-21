@@ -1,6 +1,7 @@
 import React from 'react';
 import { icons } from '../../../src/projectsData';
 import './ToolsUsed.css';
+import { Container } from 'react-bootstrap';
 
 const toolsData = [
   { icon: icons.VS_Icon, alt: 'visual-basic', text: 'VS' },
@@ -20,7 +21,7 @@ const toolsData = [
 
 function ToolsUsed() {
   return (
-    <div className="tools-container">
+    <Container className="tools-container">
       <h1>Tools Used</h1>
       <ul>
       {toolsData.map((tool, index) => (
@@ -30,7 +31,7 @@ function ToolsUsed() {
         </div>
       ))}
     </ul>
-    </div>
+    </Container>
   );
 }
 

@@ -1,4 +1,5 @@
 {
+  "nav": { "about": "À propos", "projects": "Projets", "github": "Github" },
   "introTitle": "LAISSEZ-MOI ME PRÉSENTER",
   "introText1": "Je suis ingénieur logiciel avec de l’expérience en C#/C++, Unity, Unreal Engine et outils.",
   "introText2": "Je suis plutôt généraliste et mes principaux centres d’intérêt sont les outils et plugins pour Unreal Engine 5.",
