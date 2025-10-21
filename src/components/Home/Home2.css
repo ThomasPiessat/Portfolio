@@ -61,7 +61,7 @@
   aspect-ratio: 210 / 297;   /* A4 proportion; keeps layout stable */
   object-fit: cover;          /* or 'contain' if you prefer no crop */
   border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--brand) 35%, transparent);
   border: 1px solid var(--border);
 }
 
@@ -86,13 +86,13 @@
 
 /* primary = filled */
 .btn-primary {
-  background: var(--btn-bg, #0a6f8b);
+  background: var(--brand);
   color: #fff;
 }
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(10, 111, 139, 0.35);
-  background: var(--btn-bg-hover, #084e64);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--brand) 35%, transparent);
+  background: var(--brand-600);
 }
 
 /* secondary = outline, theme aware text */

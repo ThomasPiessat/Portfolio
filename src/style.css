@@ -7,12 +7,46 @@
   --surface-1: #ffffff;
   --surface-2: #f0f1f5;
 
-  --brand: #9b5cf6;
   --btn-bg: #0a6f8b;
   --btn-bg-hover: #084e64;
 
   --border: rgba(0, 0, 0, 0.08);
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+:root[data-accent="purple"] {
+  --brand: #9b5cf6;
+  --brand-600: #7f3df2;
+  --brand-700: #6a2fe5;
+  --brand-950: #2a1448;
+}
+
+:root[data-accent="teal"] {
+  --brand: #14b8a6;
+  --brand-600: #0d9488;
+  --brand-700: #0f766e;
+  --brand-950: #042f2e;
+}
+
+:root[data-accent="gold"] {
+  --brand: #f59e0b;
+  --brand-600: #d97706;
+  --brand-700: #b45309;
+  --brand-950: #451a03;
+}
+
+:root[data-accent="rose"] {
+  --brand: #f43f5e;
+  --brand-600: #e11d48;
+  --brand-700: #be123c;
+  --brand-950: #3f0a1a;
+}
+
+:root[data-accent="lime"] {
+  --brand: #84cc16;
+  --brand-600: #65a30d;
+  --brand-700: #4d7c0f;
+  --brand-950: #1a2e05;
 }
 
 /* Dark theme overrides */
@@ -24,7 +58,6 @@
   --surface-1: #17181d;
   --surface-2: #1e2026;
 
-  --brand: #9b5cf6;
   --btn-bg: #0a6f8b;
   --btn-bg-hover: #073a48;
 

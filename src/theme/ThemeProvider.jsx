@@ -1,41 +1,52 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 
-const ThemeContext = createContext({ theme: "light", toggleTheme: () => {} });
+const ThemeContext = createContext({
+  theme: "light",
+  accent: "purple",
+  toggleTheme: () => {},
+  setAccent: () => {},
+});
 
 export function ThemeProvider({ children }) {
-  const getInitial = () => {
+  const getInitialTheme = () => {
     const stored = localStorage.getItem("theme");
     if (stored) return stored;
-    // fallback to system preference
-    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
+    return window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   };
+  const getInitialAccent = () => localStorage.getItem("accent") || "purple";
 
-  const [theme, setTheme] = useState(getInitial);
+  const [theme, setTheme] = useState(getInitialTheme);
+  const [accent, setAccent] = useState(getInitialAccent);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
-    // help browser styles (scrollbars, form controls)
     document.documentElement.style.colorScheme = theme === "dark" ? "dark" : "light";
   }, [theme]);
 
-  // Live sync with system preference if user hasn't explicitly chosen:
   useEffect(() => {
-    const mql = window.matchMedia("(prefers-color-scheme: dark)");
-    const onChange = (e) => {
+    document.documentElement.setAttribute("data-accent", accent);
+    localStorage.setItem("accent", accent);
+  }, [accent]);
+
+  // Track system changes only if user hasn't manually chosen a theme
+  useEffect(() => {
+    const mql = window.matchMedia?.("(prefers-color-scheme: dark)");
+    const handler = e => {
       const stored = localStorage.getItem("theme");
       if (!stored) setTheme(e.matches ? "dark" : "light");
     };
-    mql.addEventListener?.("change", onChange);
-    return () => mql.removeEventListener?.("change", onChange);
+    mql?.addEventListener?.("change", handler);
+    return () => mql?.removeEventListener?.("change", handler);
   }, []);
 
-  const value = useMemo(
-    () => ({ theme, setTheme, toggleTheme: () => setTheme(t => (t === "dark" ? "light" : "dark")) }),
-    [theme]
-  );
+  const value = useMemo(() => ({
+    theme,
+    accent,
+    toggleTheme: () => setTheme(t => (t === "dark" ? "light" : "dark")),
+    setAccent,
+    setTheme,
+  }), [theme, accent]);
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }

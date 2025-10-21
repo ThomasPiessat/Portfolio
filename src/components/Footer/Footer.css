@@ -22,12 +22,12 @@
 }
 
 .footer-highlight {
-  color: #9b5cf6;
+  color: var(--brand-600);
   font-weight: 600;
 }
 
 .footer-text:hover .footer-highlight {
-  text-shadow: 0 0 6px rgba(155, 92, 246, 0.6);
+  text-shadow: 0 0 6px var(--brand-600)
 }
 
 /* Make sure it stays clean on smaller screens */

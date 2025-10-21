@@ -19,7 +19,7 @@
 }
 
 .navbar-brand-text:hover h1 {
-  color: #9b5cf6;
+   color: var(--brand);
 }
 
 .nav-links .nav-link {
@@ -30,7 +30,7 @@
 }
 
 .nav-links .nav-link:hover {
-  color: #9b5cf6 !important;
+  color:var(--brand) !important;
   opacity: 1;
 }
 
@@ -58,8 +58,8 @@
 
 /* Active language feedback */
 .lang-btn.active {
-  background: rgba(155, 92, 246, 0.18);
-  border-color: #9b5cf6;
+  background: var(--brand-700);
+  border-color: var(--brand);
   box-shadow: 0 0 0 2px rgba(155, 92, 246, 0.25) inset;
 }
 
@@ -85,6 +85,36 @@
   background-color: rgba(255,255,255,0.08);
   transform: translateY(-1px);
 }
+
+.accent-switch {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.accent-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--brand); /* will be overridden below per class */
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.accent-dot.active {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--brand) 40%, transparent);
+  transform: scale(1.05);
+  border-color: var(--brand);
+}
+
+/* Explicit dot colors for preview (independent of current accent) */
+.accent-dot.purple { background: #9b5cf6; }
+.accent-dot.teal   { background: #14b8a6; }
+.accent-dot.gold   { background: #f59e0b; }
+.accent-dot.rose   { background: #f43f5e; }
+.accent-dot.lime   { background: #84cc16; }
+
 
 /* Mobile tweaks */
 @media (max-width: 991.98px) {

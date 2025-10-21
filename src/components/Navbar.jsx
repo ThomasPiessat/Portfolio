@@ -6,6 +6,23 @@ import { useTheme } from "../theme/ThemeProvider";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
 
+function AccentSwitcher() {
+  const { accent, setAccent } = useTheme();
+  const options = ["purple", "teal", "gold", "rose", "lime"];
+  return (
+    <div className="accent-switch" role="group" aria-label="Accent color">
+      {options.map(opt => (
+        <button
+          key={opt}
+          className={`accent-dot ${opt} ${accent === opt ? "active" : ""}`}
+          onClick={() => setAccent(opt)}
+          title={opt}
+          aria-pressed={accent === opt}
+        />
+      ))}
+    </div>
+  );
+}
 function NavBar() {
   const [updateExpanded] = useState(false);
   const { i18n, t } = useTranslation(); // t used for link labels if you localize them
@@ -67,6 +84,7 @@ function NavBar() {
             >
               {theme === "dark" ? "☀️" : "🌙"}
             </button>
+            <AccentSwitcher />
           </div>
           </Navbar.Collapse>
         </Container>

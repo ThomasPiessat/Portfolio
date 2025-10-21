@@ -1,11 +1,15 @@
 .tools-container {
   background: var(--surface-1);
-  color: var(--text-color);
+  color: var(--brand);
   border: 1px solid var(--border);
   border-radius: 12px;
   box-shadow: var(--shadow-sm);
   padding: 18px;
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.tools-container h1 {
+  color: var(--brand);
 }
 
 /* grid-ish flow */
