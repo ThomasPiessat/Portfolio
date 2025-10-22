@@ -82,3 +82,21 @@ html, body {
 * {
   transition: background-color .25s ease, color .25s ease, border-color .25s ease;
 }
+
+/* Flex column shell */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main takes remaining space (pushes footer down) */
+.app-main {
+  flex: 1 0 auto;
+}
+
+/* Footer stays after content, no overlay */
+.footer {
+  position: relative;   /* ensure not fixed */
+  z-index: 1;
+}
