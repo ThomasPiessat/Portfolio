@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c07791c3.css",
-    "main.js": "/static/js/main.e463f38c.js",
+    "main.css": "/static/css/main.370a6c03.css",
+    "main.js": "/static/js/main.92caa32e.js",
     "static/media/FR_CV.pdf": "/static/media/FR_CV.eefdc6f248d776b3d4c6.pdf",
     "static/media/CityAlongsideRoad.png": "/static/media/CityAlongsideRoad.a8860265ad0b8e903e2d.png",
     "static/media/Overview.png": "/static/media/Overview.ccc590fdb218469a902c.png",
@@ -9,9 +9,9 @@
     "static/media/CityGeneration.png": "/static/media/CityGeneration.0a1e87c9c24e181f3d4d.png",
     "static/media/GundamEvo_Overview.jpg": "/static/media/GundamEvo_Overview.f3440344e476f3800251.jpg",
     "static/media/accelGameplay.jpg": "/static/media/accelGameplay.94e3b694d6d3714a580d.jpg",
-    "static/media/CV_image.png": "/static/media/CV_image.0a202868bfc965d0d506.png",
+    "static/media/CV_image.png": "/static/media/CV_image.1a339ff5d4aeb26cdd46.png",
     "static/media/ksp2_Overview.jpg": "/static/media/ksp2_Overview.32a2fb0ec838f62d9822.jpg",
-    "static/media/JosefinSans-VariableFont_wght.ttf": "/static/media/JosefinSans-VariableFont_wght.613585db06f849ca7717.ttf",
+    "static/media/CV_SoftwareEngineer_en_Final.pdf": "/static/media/CV_SoftwareEngineer_en_Final.29299d434629ec47a569.pdf",
     "static/media/visual-code.png": "/static/media/visual-code.5033f1155d3617827f78.png",
     "static/media/accelSteam.jpg": "/static/media/accelSteam.d65952ef1b8db8f203bf.jpg",
     "static/media/c-sharp.png": "/static/media/c-sharp.a7346c0fe3975834e6da.png",
@@ -23,11 +23,11 @@
     "static/media/unity.png": "/static/media/unity.019f8df7ed8f6732ddc1.png",
     "static/media/jira.png": "/static/media/jira.bb78f993a98783fa8746.png",
     "index.html": "/index.html",
-    "main.c07791c3.css.map": "/static/css/main.c07791c3.css.map",
-    "main.e463f38c.js.map": "/static/js/main.e463f38c.js.map"
+    "main.370a6c03.css.map": "/static/css/main.370a6c03.css.map",
+    "main.92caa32e.js.map": "/static/js/main.92caa32e.js.map"
   },
   "entrypoints": [
-    "static/css/main.c07791c3.css",
-    "static/js/main.e463f38c.js"
+    "static/css/main.370a6c03.css",
+    "static/js/main.92caa32e.js"
   ]
 }
