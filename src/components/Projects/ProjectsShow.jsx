@@ -1,49 +1,47 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { imagesPerso, imagesPro, imagesStud } from  "../../projectsData.js";
-import "./ProjectsShow.css"
-import ProjectBox from './ProjectBox.jsx';
+import { useTranslation } from "react-i18next";
+import { imagesPerso, imagesPro, imagesStud } from "../../projectsData";
+import "./ProjectsShow.css";
+import ProjectBox from "./ProjectBox";
 
-const personalProjectImages = [imagesPerso.PCG_Overview ];
-const professionalProjectImages = [imagesPro.GundamEvo_Overview, imagesPro.KSP2_Overview ];
-const studentProjectImages = [imagesStud.Accel_Overview ];
+const personalProjectImages = [imagesPerso.PCG_Overview];
+const professionalProjectImages = [imagesPro.GundamEvo_Overview, imagesPro.KSP2_Overview];
+const studentProjectImages = [imagesStud.Accel_Overview];
 
 function ProjectsShow() {
+  const { t } = useTranslation();
+
   const projectCategories = [
     {
       category: "PersonalProject",
-      title: "Personal Project",
-      description: "Projects that I did during my free time",
+      title: t("projects.personal"),
+      description: t("projects.personalDescription"),
       images: personalProjectImages,
     },
     {
       category: "ProfessionalProject",
-      title: "Professional Project",
-      description: "Projects that I did in studios",
+      title: t("projects.professional"),
+      description: t("projects.professionalDescription"),
       images: professionalProjectImages,
     },
     {
       category: "StudentProject",
-      title: "Student Project",
-      description: "Projects that I did during my studies",
+      title: t("projects.student"),
+      description: t("projects.studentDescription"),
       images: studentProjectImages,
     },
-    // {
-    //   category: "AllProjects",
-    //   title: "All Projects",
-    //   description: "See all projects",
-    //   images: personalProjectImages.concat(
-    //     professionalProjectImages,
-    //     studentProjectImages
-    //   ),
-    // },
   ];
 
   return (
-    <Container fluid className="project-section">
-      <div className="projectsBox-container">
-        {projectCategories.map((categoryData) => (
-          <ProjectBox key={categoryData.category} {...categoryData} detailsButtonText='View More Projects' />
+    <Container fluid className="project-section" id="projects-section">
+      <div className="projectsBox-container" id="projects-grid">
+        {projectCategories.map((c) => (
+          <ProjectBox
+            key={c.category}
+            {...c}
+            detailsButtonText={t("projects.viewMoreProjects")}
+          />
         ))}
       </div>
     </Container>

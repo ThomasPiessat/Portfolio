@@ -25,5 +25,17 @@
       "xpTitle": "Objectif 3D — Gameplay programmer",
       "location": "Montpellier, France"
     }
+  },
+  "projects": {
+    "personal": "Personal Projects",
+    "personalDescription": "Projects that I did during my free time",
+    "professional": "Professional Projects",
+    "professionalDescription": "Projects that I did in studios",
+    "student": "Student Projects",
+    "studentDescription": "Projects that I did during my studies",
+    "details": "Project Details",
+    "viewDetails": "View Details",
+    "backToProjects": "Back to Projects",
+    "viewMoreProjects": "View More Projects"
   }
 }
