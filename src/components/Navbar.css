@@ -108,6 +108,20 @@
   border-color: var(--brand);
 }
 
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  color: var(--text-color);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.icon-link:hover {
+  color: var(--brand);
+  transform: translateY(-1px);
+}
+
 /* Explicit dot colors for preview (independent of current accent) */
 .accent-dot.purple { background: #9b5cf6; }
 .accent-dot.teal   { background: #14b8a6; }
