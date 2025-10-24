@@ -37,5 +37,18 @@
     "viewDetails": "View Details",
     "backToProjects": "Back to Projects",
     "viewMoreProjects": "View More Projects"
-  }
+  },
+  "projectDetails": {
+    "allProjects": "All Projects",
+    "projectType": "Project Type",
+    "kind": "Kind",
+    "engine": "Engine",
+    "language": "Language",
+    "team": "Team",
+    "time": "Time",
+    "period": "Period",
+    "projectPage": "Project Page",
+    "about": "About the {{kind}}",
+    "back": "Back to Projects View"
+}
 }

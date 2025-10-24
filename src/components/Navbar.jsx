@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "../theme/ThemeProvider";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
 
@@ -30,34 +31,43 @@ function NavBar() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-      <Navbar collapseOnSelect expand="lg" className="custom-navbar" sticky="top">
-        <Container className="nav-inner">
-          <Navbar.Brand as={Link} to="/" className="navbar-brand-text">
-            <h1>Thomas Piessat</h1>
-          </Navbar.Brand>
+    <Navbar collapseOnSelect expand="lg" className="custom-navbar" sticky="top">
+      <Container className="nav-inner">
+        <Navbar.Brand as={Link} to="/" className="navbar-brand-text">
+          <h1>Thomas Piessat</h1>
+        </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="nav-links ms-auto">
-              <Nav.Link as={Link} to="/about" onClick={() => updateExpanded(false)}>
-                <span>{t("nav.about", { defaultValue: "About" })}</span>
-              </Nav.Link>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="nav-links ms-auto">
+            <Nav.Link as={Link} to="/about" onClick={() => updateExpanded(false)}>
+              <span>{t("nav.about", { defaultValue: "About" })}</span>
+            </Nav.Link>
 
-              <Nav.Link as={Link} to="/project" onClick={() => updateExpanded(false)}>
-                <span>{t("nav.projects", { defaultValue: "Projects" })}</span>
-              </Nav.Link>
+            <Nav.Link as={Link} to="/project" onClick={() => updateExpanded(false)}>
+              <span>{t("nav.projects", { defaultValue: "Projects" })}</span>
+            </Nav.Link>
 
-              <Nav.Link
-                href="https://github.com/ThomasPiessat"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>Github</span>
-              </Nav.Link>
-            </Nav>
+            {/* --- ICONS --- */}
+            <Nav.Link
+              href="https://github.com/ThomasPiessat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-link"
+            >
+              <FaGithub size={24} />
+            </Nav.Link>
+            <Nav.Link
+              href="https://www.linkedin.com/in/thomas-piessat/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-link"
+            >
+              <FaLinkedin size={24} />
+            </Nav.Link>
+          </Nav>
 
-            {/* Language switch on the far right */}
-
+          {/* Language switch on the far right */}
           <div className="right-controls">
             <div className="language-switch" role="group" aria-label="Language">
               <button
@@ -86,9 +96,9 @@ function NavBar() {
             </button>
             <AccentSwitcher />
           </div>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 

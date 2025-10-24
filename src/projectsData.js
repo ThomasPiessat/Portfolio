@@ -76,6 +76,7 @@ export const projects = [
         id: 1,
         title: 'Accel',
         projectType: 'StudentProject',
+        projectKind: 'Game',
         engine: 'Unreal Engine 4',
         language: 'Blueprint',
         team: '3 programmers, 5 graphic designers, 1 game designer, 2 sound designers',
@@ -93,6 +94,7 @@ export const projects = [
         id: 2,
         title: 'GundamEvolution',
         projectType: 'ProfessionalProject',
+        projectKind: 'Game',
         engine: 'Unreal Engine 4',
         language: 'C++/Blueprint',
         team: '',
@@ -108,6 +110,7 @@ export const projects = [
         id: 3,
         title: 'Kerbal Space Program 2',
         projectType: 'ProfessionalProject',
+        projectKind: 'Game',
         engine: 'Unity',
         language: 'C#',
         team: '',
@@ -120,17 +123,48 @@ export const projects = [
           ]
         },
         {
-            id: 4,
-            title: 'Procedural City Generation',
-            projectType: 'PersonalProject',
-            engine: 'Unreal Engine 5',
-            language: 'C++/Blueprint',
-            team: '',
-            time: '',
-            period: '',
-            aboutTheGame: '',
-            images: [
-                imagesPerso.PCG_Overview
-              ]
-            },
+          id: 4,
+          title: 'Procedural City Generation',
+          projectType: 'PersonalProject',
+          projectKind: 'Tool',
+          engine: 'Unreal Engine 5',
+          language: 'C++/Blueprint',
+          team: '',
+          time: '',
+          period: '',
+          aboutTheGame: '',
+          images: [
+              imagesPerso.PCG_Overview
+         ]
+        },
+        // {
+        //   id: 5,
+        //   title: 'Portfolio Website',
+        //   projectType: 'PersonalProject',
+        //   projectKind: 'Website',
+        //   engine: '',
+        //   language: 'ReactJS',
+        //   team: '',
+        //   time: '',
+        //   period: '',
+        //   aboutTheGame: '',
+        //   images: [
+              
+        //  ]
+        // },
+        //         {
+        //   id: 6,
+        //   title: 'Dev ToolBox',
+        //   projectType: 'PersonalProject',
+        //   projectKind: 'Tool',
+        //   engine: '',
+        //   language: '.Net C# WPF',
+        //   team: '',
+        //   time: '',
+        //   period: '',
+        //   aboutTheGame: 'A custom toolbox for developers with utility scripts.',
+        //   images: [
+              
+        //  ]
+        // },
   ];

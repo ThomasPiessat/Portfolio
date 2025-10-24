@@ -1,5 +1,9 @@
 {
-  "nav": { "about": "À propos", "projects": "Projets", "github": "Github" },
+  "nav": {
+    "about": "À propos",
+    "projects": "Projets",
+    "github": "Github"
+  },
   "introTitle": "LAISSEZ-MOI ME PRÉSENTER",
   "introText1": "Je suis ingénieur logiciel avec de l’expérience en C#/C++, Unity, Unreal Engine et outils.",
   "introText2": "Je suis plutôt généraliste et mes principaux centres d’intérêt sont les outils et plugins pour Unreal Engine 5.",
@@ -37,5 +41,18 @@
     "viewDetails": "Voir les détails",
     "backToProjects": "Retour aux projets",
     "viewMoreProjects": "Voir plus de projets"
+  },
+  "projectDetails": {
+    "allProjects": "Tous les projets",
+    "projectType": "Type de projet",
+    "kind": "Nature",
+    "engine": "Moteur",
+    "language": "Langage",
+    "team": "Équipe",
+    "time": "Durée",
+    "period": "Période",
+    "projectPage": "Page du projet",
+    "about": "À propos du {{kind}}",
+    "back": "Retour à la vue des projets"
   }
 }
