@@ -2,15 +2,23 @@
 //Resume
 import CV from '../src/assets/img/resume/CV_image.png'
 import CV_PDF from '../src/assets/dl/FR_CV.pdf'
+//perso
 //PCG
-import PCG_Overview from './assets/img/PCG/Overview.png'
-import PCG_CirtyGeneration from './assets/img/PCG/CityGeneration.png'
-import PCG_CityRoad from './assets/img/PCG/CityAlongsideRoad.png'
+import PCG_Overview from './assets/img/personalProjects/PCG/Overview.png'
+import PCG_CirtyGeneration from './assets/img/personalProjects/PCG/CityGeneration.png'
+import PCG_CityRoad from './assets/img/personalProjects/PCG/CityAlongsideRoad.png'
+//Site
+import Site_Overview from './assets/img/personalProjects/Portfolio/Portfolio_Overview.png'
+//DevToolbox
+import DevToolbox_Overview from './assets/img/personalProjects/DevToolbox/DevToolbox_Overview.png'
+import DevToolbox_Psw from './assets/img/personalProjects/DevToolbox/DevToolbox_Psw.png'
+
 //sudent
 //accel
 import Accel_Overview from './assets/img/studentsProjects/accel/accelSteam.jpg'
 import Accel_Gameplay1 from './assets/img/studentsProjects/accel/accelGameplay.jpg'
 import Accel_Gameplay2 from './assets/img/studentsProjects/accel/accelGameplay2.jpg'
+
 //pro
 //gundam
 import GundamEvo_Overview from './assets/img/professionalProjects/gundamEvolution/GundamEvo_Overview.jpg'
@@ -40,7 +48,10 @@ export const cv = {
 export const imagesPerso = {
     PCG_Overview,
     PCG_CirtyGeneration,
-    PCG_CityRoad
+    PCG_CityRoad,
+    Site_Overview,
+    DevToolbox_Overview,
+    DevToolbox_Psw
 };
 
 export const imagesPro = {
@@ -137,34 +148,36 @@ export const projects = [
               imagesPerso.PCG_Overview
          ]
         },
-        // {
-        //   id: 5,
-        //   title: 'Portfolio Website',
-        //   projectType: 'PersonalProject',
-        //   projectKind: 'Website',
-        //   engine: '',
-        //   language: 'ReactJS',
-        //   team: '',
-        //   time: '',
-        //   period: '',
-        //   aboutTheGame: '',
-        //   images: [
-              
-        //  ]
-        // },
-        //         {
-        //   id: 6,
-        //   title: 'Dev ToolBox',
-        //   projectType: 'PersonalProject',
-        //   projectKind: 'Tool',
-        //   engine: '',
-        //   language: '.Net C# WPF',
-        //   team: '',
-        //   time: '',
-        //   period: '',
-        //   aboutTheGame: 'A custom toolbox for developers with utility scripts.',
-        //   images: [
-              
-        //  ]
-        // },
+        {
+          id: 5,
+          title: 'Portfolio Website',
+          projectType: 'PersonalProject',
+          projectKind: 'Website',
+          engine: '',
+          language: 'ReactJS',
+          team: '',
+          time: '',
+          period: '',
+          aboutTheGame: '',
+          images: [
+                imagesPerso.Site_Overview              
+         ]
+        },
+                {
+          id: 6,
+          title: 'Dev ToolBox',
+          projectType: 'PersonalProject',
+          projectKind: 'Tool',
+          engine: '',
+          language: '.Net C# WPF',
+          team: '',
+          time: '',
+          period: '',
+          projectPage: 'https://github.com/ThomasPiessat/Dev_ToolBox',
+          aboutTheGame: 'A custom toolbox for developers with utility scripts.',
+          images: [
+              imagesPerso.DevToolbox_Overview,
+                imagesPerso.DevToolbox_Psw
+         ]
+        },
   ];

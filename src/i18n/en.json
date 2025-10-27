@@ -38,6 +38,13 @@
     "backToProjects": "Back to Projects",
     "viewMoreProjects": "View More Projects"
   },
+  "categories": {
+    "personal": "Personal",
+    "professional": "Professional",
+    "student": "Student",
+    "all": "All",
+    "ariaLabel": "Project categories"
+  },
   "projectDetails": {
     "allProjects": "All Projects",
     "projectType": "Project Type",
@@ -49,6 +56,7 @@
     "period": "Period",
     "projectPage": "Project Page",
     "about": "About the {{kind}}",
-    "back": "Back to Projects View"
+    "back": "Back to Projects View",
+    "backToCategories": "Back to All Categories"
 }
 }

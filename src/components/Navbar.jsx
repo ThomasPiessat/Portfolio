@@ -55,7 +55,7 @@ function NavBar() {
               rel="noopener noreferrer"
               className="icon-link"
             >
-              <FaGithub size={24} />
+              <FaGithub size={22} />
             </Nav.Link>
             <Nav.Link
               href="https://www.linkedin.com/in/thomas-piessat/"
@@ -63,10 +63,9 @@ function NavBar() {
               rel="noopener noreferrer"
               className="icon-link"
             >
-              <FaLinkedin size={24} />
+              <FaLinkedin size={22} />
             </Nav.Link>
           </Nav>
-
           {/* Language switch on the far right */}
           <div className="right-controls">
             <div className="language-switch" role="group" aria-label="Language">

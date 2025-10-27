@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
 import { useLocation, Link, NavLink } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 import { projects } from "../../../projectsData";
 import ProjectBox from '../ProjectBox';
 import './ProjectsPage.css';
 
 function CategoryNav() {
+  const { t } = useTranslation();
   const cats = [
-    { to: '/project/PersonalProject', label: 'Personal' },
-    { to: '/project/ProfessionalProject', label: 'Professional' },
-    { to: '/project/StudentProject', label: 'Student' },
-    { to: '/project', label: 'All' },
+    { to: "/project/PersonalProject", label: t("categories.personal") },
+    { to: "/project/ProfessionalProject", label: t("categories.professional") },
+    { to: "/project/StudentProject", label: t("categories.student") },
+    { to: "/project", label: t("categories.all") },
   ];
   return (
     <nav className="category-nav" aria-label="Project categories">
@@ -23,6 +25,7 @@ function CategoryNav() {
 }
 
 export default function PersonalProjectsPage() {
+  const { t } = useTranslation();
   const location = useLocation();
   const personalProjects = projects.filter((p) => p.projectType === 'PersonalProject');
 
@@ -47,7 +50,7 @@ export default function PersonalProjectsPage() {
 
   return (
     <div className="category-page">
-      <h2 className="category-title">Personal Projects</h2>
+      <h2 className="category-title">{t("projects.personal")}</h2>
 
       <CategoryNav />
 
@@ -65,7 +68,7 @@ export default function PersonalProjectsPage() {
       </div>
 
       <div className="back-overview">
-        <Link to="/project" className="view-details">Back to All Categories</Link>
+        <Link to="/project" className="view-details">{t("projectDetails.backToCategories")}</Link>
       </div>
     </div>
   );

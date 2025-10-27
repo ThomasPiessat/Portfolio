@@ -5,7 +5,7 @@ import { imagesPerso, imagesPro, imagesStud } from "../../projectsData";
 import "./ProjectsShow.css";
 import ProjectBox from "./ProjectBox";
 
-const personalProjectImages = [imagesPerso.PCG_Overview];
+const personalProjectImages = [imagesPerso.PCG_Overview, imagesPerso.Site_Overview, imagesPerso.DevToolbox_Overview, imagesPerso.DevToolbox_Psw];
 const professionalProjectImages = [imagesPro.GundamEvo_Overview, imagesPro.KSP2_Overview];
 const studentProjectImages = [imagesStud.Accel_Overview];
 

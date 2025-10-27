@@ -42,6 +42,13 @@
     "backToProjects": "Retour aux projets",
     "viewMoreProjects": "Voir plus de projets"
   },
+    "categories": {
+    "personal": "Personnel",
+    "professional": "Professionnel",
+    "student": "Étudiant",
+    "all": "Tous",
+    "ariaLabel": "Catégories de projets"
+  },
   "projectDetails": {
     "allProjects": "Tous les projets",
     "projectType": "Type de projet",
@@ -53,6 +60,7 @@
     "period": "Période",
     "projectPage": "Page du projet",
     "about": "À propos du {{kind}}",
-    "back": "Retour à la vue des projets"
+    "back": "Retour à la vue des projets",
+    "backToCategories": "Retour à toutes les catégories"
   }
 }
