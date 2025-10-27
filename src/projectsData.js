@@ -1,7 +1,4 @@
 // Import all images
-//Resume
-import CV from '../src/assets/img/resume/CV_image.png'
-import CV_PDF from '../src/assets/dl/FR_CV.pdf'
 //perso
 //PCG
 import PCG_Overview from './assets/img/personalProjects/PCG/Overview.png'
@@ -38,12 +35,6 @@ import Vue_Icon from '../src/assets/img/ICO/vue.png'
 import React_Icon from '../src/assets/img/ICO/react.png'
 import Notion_Icon from '../src/assets/img/ICO/notion.png'
 import Jira_Icon from '../src/assets/img/ICO/jira.png'
-
-// Export all images
-export const cv = { 
-    CV,
-    CV_PDF,
- };
 
 export const imagesPerso = {
     PCG_Overview,

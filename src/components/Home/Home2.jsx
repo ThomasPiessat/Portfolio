@@ -1,22 +1,32 @@
 import React, { useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import { cv } from "../../projectsData";
-import resumePdf from "../../assets/dl/CV_SoftwareEngineer_en_Final.pdf";
+import resumePdfEN from "../../assets/dl/CV_SoftwareEngineer_EN.pdf";
+import resumePdfFR from "../../assets/dl/CV_SoftwareEngineer_FR.pdf";
+import resumePreviewEN from "../../assets/img/resume/CV_en_preview.png";
+import resumePreviewFR from "../../assets/img/resume/CV_fr_preview.png";
+
 import "./Home2.css";
 
 function Home2() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  // Optional: keep a JS fallback download for older browsers
+  const lang = i18n.resolvedLanguage || i18n.language || "en";
+  const isFR = lang?.toLowerCase().startsWith("fr");
+
+  const resumePdf = isFR ? resumePdfFR : resumePdfEN;
+  const resumePreview = isFR ? resumePreviewFR : resumePreviewEN;
+  const downloadName = isFR ? "CV_Thomas_Piessat_FR.pdf" : "Resume_Thomas_Piessat_EN.pdf";
+
   const handleDownload = useCallback(() => {
-    const link = document.createElement("a");
-    link.href = resumePdf;
-    link.download = "Thomas_Piessat_CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-  }, []);
+    const a = document.createElement("a");
+    a.href = resumePdf;
+    a.download = downloadName;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }, [resumePdf, downloadName]);
+
 
   return (
     <Container fluid className="home-about-section" id="about" aria-labelledby="intro-heading">
@@ -30,14 +40,13 @@ function Home2() {
 
         {/* Right column: resume card */}
         <Col lg={5} className="resume-col">
-          <section className="resume-card" aria-labelledby="resume-title">
-            <h2 id="resume-title">{t("resume")}</h2>
+          <div className="resume-card">
+            <h2>{t("resume")}</h2>
             <div className="resume-card-body">
               <img
-                src={cv?.CV || "/assets/img/resume-preview.jpg"}
-                alt={t("resumeAlt", { defaultValue: "Resume preview" })}
+                src={resumePreview}
+                alt={isFR ? "CV — Thomas Piessat (FR)" : "Resume — Thomas Piessat (EN)"}
                 className="resume-img"
-                loading="lazy"
               />
               <div className="resume-actions">
                 <button className="btn-primary" onClick={handleDownload}>
@@ -48,7 +57,7 @@ function Home2() {
                 </a>
               </div>
             </div>
-          </section>
+          </div>
         </Col>
       </Row>
     </Container>
